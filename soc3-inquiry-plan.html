@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>單元三 探究實作 課程活動</title>
+<meta name="description" content="社會單元三探究實作「如何讓臺灣物產資源和地方生活永續發展」兩節課程活動與學習單（南一版五上）">
+<style>
+:root{--bg:#E8ECE3;--paper:#FBFCF9;--ink:#3F4A31;--green:#4F5C3D;--muted:#6E6458;--line:#D3DAC8;--soft:#EEF1E9;--accent:#798D5E;--warm:#B8873A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;font-size:16px}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+h1,h2,h3,h4{line-height:1.4;margin:0}
+h1{font-size:30px}
+h2{font-size:23px;margin:0 0 12px}
+h3{font-size:18px;margin:18px 0 8px}
+p{margin:6px 0}
+a{color:var(--accent)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0}
+.eyebrow{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:700}
+.tag{display:inline-block;background:var(--soft);color:var(--accent);border-radius:20px;padding:2px 11px;font-size:13px;margin:2px 4px 2px 0}
+.toolbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:var(--green);color:#fff;border:0;border-radius:9px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;font-size:15px}
+.btn.secondary{background:var(--paper);color:var(--green);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;margin:8px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--soft);font-weight:700}
+.tbl-wrap{overflow-x:auto}
+.plan td:first-child{white-space:nowrap;width:64px;text-align:center;font-weight:700;color:var(--accent)}
+.plan td:nth-child(2){min-width:280px}
+.plan td:nth-child(3){min-width:170px;color:var(--muted)}
+.plan td:nth-child(4){min-width:150px;font-size:14px}
+.code{font-size:12.5px;color:var(--warm);display:block;margin-top:4px}
+.goal{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:10px 0}
+.note{border-left:3px solid var(--warm);padding-left:12px;color:var(--muted);margin:8px 0}
+ul{margin:6px 0;padding-left:22px}
+.overview td:first-child{font-weight:700;white-space:nowrap}
+
+/* ---------- A4 學習單 ---------- */
+.sheet{background:#fff;color:#222;width:210mm;max-width:100%;min-height:297mm;margin:22px auto;padding:12mm 13mm;box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:11.5pt;line-height:1.55}
+.sheet h2{font-size:17pt;margin:0;color:#222}
+.sheet h3{font-size:12.5pt;margin:9px 0 5px;padding:2px 8px;background:#EEF1E9;border-left:4px solid #4F5C3D;color:#222}
+.sheet table{margin:4px 0}
+.sheet th,.sheet td{border:1px solid #777;padding:4px 6px;font-size:10.5pt}
+.sheet th{background:#F1F3EE}
+.sheet .head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #333;padding-bottom:6px;margin-bottom:6px;gap:10px;flex-wrap:wrap}
+.sheet .who{font-size:10.5pt;white-space:nowrap}
+.sheet .sub{font-size:9.5pt;color:#555}
+.sheet .tip{font-size:9.5pt;color:#555}
+.fill{display:inline-block;border-bottom:1px solid #333;min-width:28mm}
+.fill.s{min-width:16mm}.fill.l{min-width:52mm}
+.ln{border-bottom:1px dashed #999;height:8mm}
+.box{border:1px solid #777;border-radius:6px;padding:5px 8px}
+.h12{height:12mm}.h16{height:16mm}.h20{height:20mm}.h24{height:24mm}
+.chain{display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr;align-items:center;gap:2px;margin:4px 0}
+.chain .box{min-height:22mm;font-size:9.5pt;color:#555}
+.arrow{text-align:center;font-weight:700}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chk{font-size:10.5pt}
+.ticket{border:2px dashed #555;border-radius:8px;padding:6px 10px;margin-top:6px}
+.self td{text-align:center}.self td:first-child{text-align:left}
+.page-tag{float:right;font-size:9pt;color:#777}
+.key td{font-size:10pt}
+
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff}
+  main{max-width:none;padding:0}
+  .toolbar,.no-print{display:none!important}
+  .sheet{box-shadow:none;margin:0;width:210mm;height:297mm;min-height:0;overflow:hidden;page-break-after:always;break-after:page}
+  body.print-sheets .card{display:none}
+  body:not(.print-sheets) .card{break-inside:avoid-page;border:none;margin:0 12mm;padding:8mm 0}
+  body:not(.print-sheets) .card:first-of-type{padding-top:12mm}
+}
+@media (max-width:640px){.sheet{padding:6mm;font-size:10.5pt}.chain{grid-template-columns:1fr;}.chain .arrow{transform:rotate(90deg)}.cols2{grid-template-columns:1fr}}
+</style></head>
+<body>
+<main>
+
+<div class="toolbar no-print">
+  <a class="btn secondary" href="index.html">← 回首頁</a>
+  <a class="btn secondary" href="#plan">課程活動</a>
+  <a class="btn secondary" href="#ws5">學習單五</a>
+  <a class="btn secondary" href="#ws6">小組提案單</a>
+  <button class="btn" id="printSheets">列印學習單（A4）</button>
+  <button class="btn secondary" id="printAll">列印全部</button>
+</div>
+
+<section class="card">
+  <div class="eyebrow">南一版五上｜社會第三單元 臺灣的物產資源</div>
+  <h1>探究實作｜如何讓臺灣物產資源和地方生活永續發展？</h1>
+  <p><span class="tag">2 節（每節 40 分鐘）</span><span class="tag">學習單五（A4 正反面）＋小組提案單（A4）</span><span class="tag">單元統整</span></p>
+  <p class="note">依〈五上南一_與AI協作單元案例（第三單元）〉整理：以單元分析建議「全課持續使用同一個整理表」為探究工具，結合翠宜整理的探究實作資源（物產包裝、午餐菜單、太平山與林田山比較、地方今昔與旅遊照片）。學習目標由本頁依單元通則撰寫，請依需要調整。</p>
+  <p class="note"><b>與 3-2 的分工：</b>3-2 第 3–4 節已完成太平山、林田山、車埕的比較與 PMI 方案評估。本探究實作改以「生活中的物產」與「桃園在地案例」為對象，讓學生自己走一次完整探究流程。若總節數只有 8 節，可擇一使用：保留 3-2 第 3–4 節當作探究實作，或把 3-2 縮為 3 節後使用本設計。</p>
+
+  <h3>核心問題</h3>
+  <p>臺灣的物產資源如何和地方生活一起永續發展？我們能為家鄉的物產做什麼？</p>
+
+  <h3>探究流程</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>步驟</th><th>發現問題</th><th>蒐集資料</th><th>整理分析</th><th>提出方案</th><th>發表回饋</th></tr>
+    <tr><td>做什麼</td><td>從包裝、菜單找出物產線索，選定探究題目</td><td>查官方網站、課本、家庭旅遊照片，判讀可信度</td><td>用單元整理表分析五個面向</td><td>小組設計兼顧環境、生計、文化的永續方案</td><td>畫廊漫步、一讚一問、個人反思</td></tr>
+    <tr><td>節次</td><td colspan="2">第 1 節</td><td colspan="3">第 2 節</td></tr>
+  </table></div>
+
+  <h3>對應領綱條目</h3>
+  <div class="tbl-wrap"><table class="overview">
+    <tr><td>核心素養</td><td>社-E-A2 敏覺居住地方的社會、自然與人文環境變遷，關注生活問題及其影響，並思考解決方法。<br>社-E-C1 ……參與公共事務，養成社會責任感，……關懷自然環境與人類社會的永續發展。</td></tr>
+    <tr><td>學習表現</td><td>2a-Ⅲ-2 表達對在地與全球議題的關懷。<br>3b-Ⅲ-2 摘取及整理社會議題相關資料的重點，判讀其正確性及價值，並加以描述和解釋。<br>3d-Ⅲ-2 探究社會議題發生的原因與影響，評估與選擇合適的解決方案。</td></tr>
+    <tr><td>學習內容</td><td>Ab-Ⅲ-3 自然環境、自然災害及經濟活動，和生活空間的使用有關聯性。<br>Ce-Ⅲ-2 在經濟發展過程中，資源的使用會產生意義與價值的轉變，但也可能引發爭議。</td></tr>
+  </table></div>
+
+  <h3>任務導向學習目標</h3>
+  <div class="goal"><b>目標 5（第 1–2 節）</b>從生活中的物產包裝、午餐菜單與家庭旅遊照片找出物產線索，蒐集在地物產資料並判讀來源的可信度，區分已知與待查證資訊；運用單元整理表分析一項物產「為什麼能發展、帶來哪些好處、面臨什麼問題、可以如何改善」，小組設計兼顧環境、居民生計與文化的永續方案，透過畫廊漫步與一讚一問互評，表達對在地議題的關懷。<span class="code">社-E-A2、社-E-C1、2a-Ⅲ-2、3b-Ⅲ-2、3d-Ⅲ-2、Ab-Ⅲ-3、Ce-Ⅲ-2</span></div>
+
+  <h3>課前準備</h3>
+  <ul>
+    <li><b>學生（前一週交代）：</b>帶一樣家中的農、漁、畜產品包裝或產地標示照片（米袋、茶葉袋、牛奶盒、蔬果標籤皆可）；有去過山城、漁港、農場旅遊的，帶一張照片。</li>
+    <li><b>教師：</b>本週學校午餐菜單、平板（每組 1–2 台）、海報紙或 A3 紙、便利貼（兩色）、學習單五、小組提案單。</li>
+  </ul>
+</section>
+
+<section class="card" id="plan">
+  <div class="eyebrow">探究實作｜第 1 節</div>
+  <h2>第 1 節　物產偵探：發現問題與蒐集資料</h2>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>8′</td><td><b>【發現問題】物產偵探</b><br>學生拿出帶來的包裝或照片，搭配本週午餐菜單，完成學習單「任務一」：物產名稱、類別（農、畜、漁、林、礦）、產地，並分成「包裝上看得到的已知資訊」與「想查證的問題」。兩兩分享一項發現。</td><td>包裝上哪些資訊可以告訴我們產地與生產方式？<br>有哪些字（如標章、友善耕作）你看不懂、想查證？</td><td>任務一：能分類物產並區分已知與待查證<span class="code">3b-Ⅲ-2</span></td></tr>
+    <tr><td>7′</td><td><b>回顧單元整理表｜林田山示範</b><br>教師帶領全班用林田山填寫整理表一列：產業、為什麼能發展、帶來哪些好處、面臨什麼問題、可以如何改善。提醒這就是今天各組要用的探究工具。</td><td>林田山為什麼能發展林業？後來遇到什麼問題？怎麼改善？</td><td>全班共答<span class="code">Ce-Ⅲ-2</span></td></tr>
+    <tr><td>5′</td><td><b>分組選題</b><br>各組從桃園在地物產或課本案例中選一個題目，寫成探究問題：「＿＿如何兼顧產業發展與地方永續？」<br>建議題目：觀音蓮花、新屋永安漁港的漁業、復興區拉拉山水蜜桃、龍潭茶，或家庭旅遊去過的山城、漁港、農場。</td><td>這個物產和我們的生活有什麼關係？<br>你最想知道它的什麼？</td><td>探究問題是否聚焦<span class="code">2a-Ⅲ-2</span></td></tr>
+    <tr><td>17′</td><td><b>【蒐集資料】資料蒐集與可信度檢核</b><br>小組分工使用平板查詢（建議從官方或專業網站開始，見教學資源），也可用課本與家庭旅遊照片。每人至少記錄一筆資料：來源、重點，並用三個問題檢核可信度：是政府或專業單位嗎？有日期嗎？有證據或數據嗎？</td><td>這筆資料是誰寫的？可信嗎？<br>兩個網站說法不一樣時，怎麼辦？</td><td>任務四資料紀錄與檢核<span class="code">3b-Ⅲ-2</span></td></tr>
+    <tr><td>3′</td><td><b>小結與預告</b><br>各組確認下節要完成整理表與永續方案，還缺的資料列為回家作業（可問家人或上網查）。</td><td>我們還缺哪一欄的資料？</td><td>—</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <div class="eyebrow">探究實作｜第 2 節</div>
+  <h2>第 2 節　家鄉物產守護計畫：整理分析與提出方案</h2>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>7′</td><td><b>【整理分析】完成單元整理表</b><br>小組整合上節資料，每人在學習單「任務五」完成本組物產的整理表五欄。教師巡視，追問因果與證據。</td><td>這項物產「為什麼」能在這裡發展？（自然條件？人文條件？）<br>問題的原因是什麼？</td><td>整理表：五欄完整且有因果<span class="code">Ab-Ⅲ-3、3d-Ⅲ-2</span></td></tr>
+    <tr><td>13′</td><td><b>【提出方案】小組提案單</b><br>小組選一個最重要的問題，設計永續方案：方案名稱、具體做法（至少 3 點）、需要誰合作，並用「三面檢核」確認方案是否兼顧環境、居民生計、文化或教育，最後畫出方案示意圖。</td><td>這個方案對環境好嗎？居民能賺到錢嗎？能保留地方特色嗎？<br>可能遇到什麼困難？怎麼解決？</td><td>小組提案單<span class="code">3d-Ⅲ-2、社-E-C1</span></td></tr>
+    <tr><td>12′</td><td><b>【發表回饋】畫廊漫步與一讚一問</b><br>提案單貼在桌上或牆上，每組留一人解說，其他人輪流參觀。參觀者用兩色便利貼留言：一個「讚」（好在哪裡）和一個「問」（疑問或建議）。每人在學習單記錄一組的回饋。</td><td>這組的方案最大的優點是什麼？<br>如果你是當地居民，你會支持嗎？</td><td>同儕互評與口語表達<span class="code">2a-Ⅲ-2、社-E-A2</span></td></tr>
+    <tr><td>6′</td><td><b>個人反思｜回到核心問題</b><br>回組閱讀收到的便利貼，討論可以修正哪裡。個人完成學習單「單元總結」與「我的永續消費行動」。</td><td>臺灣的物產資源要永續，需要哪些人一起努力？<br>身為消費者，我可以怎麼做？</td><td>個人反思書寫<span class="code">社-E-C1、2a-Ⅲ-2</span></td></tr>
+    <tr><td>2′</td><td><b>單元總結</b><br>教師回到單元通則：自然環境孕育物產，技術與交通帶動產業與聚落；不當開發造成問題，需要友善生產、資源保育與產業轉型，兼顧生計、文化與生態。</td><td>—</td><td>繳交學習單五與提案單</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>評量判準</h2>
+  <div class="tbl-wrap"><table>
+    <tr><th>評量面向</th><th>優秀</th><th>達成</th><th>待加強</th><th>領綱</th></tr>
+    <tr><td>資料蒐集與判讀</td><td>資料來源多元，能說明可信度，並區分已知與待查證</td><td>至少一筆有來源的資料，完成可信度檢核</td><td>資料沒有來源或與題目無關</td><td>3b-Ⅲ-2</td></tr>
+    <tr><td>整理分析</td><td>整理表五欄完整，能說出發展條件與問題的因果</td><td>整理表五欄大致完整</td><td>只列出物產名稱或片段資訊</td><td>Ab-Ⅲ-3、3d-Ⅲ-2</td></tr>
+    <tr><td>永續方案</td><td>做法具體可行，三面檢核都有說明，並預想困難與解決</td><td>有具體做法，兼顧至少兩個面向</td><td>做法空泛（如「大家要愛護環境」）</td><td>3d-Ⅲ-2、社-E-C1</td></tr>
+    <tr><td>發表與回饋</td><td>能清楚解說，給同儕具體的讚與建議，並據以修正</td><td>能完成解說與一讚一問</td><td>回饋只寫「很好」</td><td>2a-Ⅲ-2</td></tr>
+    <tr><td>反思與行動</td><td>能連結單元概念說明永續需要多方合作，並提出可實踐的行動</td><td>能寫出一項生活行動</td><td>未完成反思</td><td>社-E-C1</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>教學提醒</h2>
+  <ul>
+    <li><b>選題要小而具體：</b>「桃園的農業」太大，「觀音蓮花」剛好。題目太大的組別，引導聚焦到一項物產、一個地方。</li>
+    <li><b>先查官方網站：</b>五年級學生搜尋時容易停在廣告或部落格。可先提供網址清單，並示範用「誰寫的、有沒有日期、有沒有證據」三問檢核。</li>
+    <li><b>區分已知與待查證：</b>這是本單元 3b-Ⅲ-2「判讀正確性」的重點，查不到的資料就寫在待查證欄，不要猜測。</li>
+    <li><b>方案避免空泛：</b>學生常寫「大家要愛護環境」。追問：「誰？做什麼？在哪裡？」並用三面檢核確認是否兼顧居民生計。</li>
+    <li><b>不是每個方案都要變觀光：</b>延續 3-2 的提醒，鼓勵友善生產、產銷履歷、在地消費、環境教育等不同方向。</li>
+    <li><b>在地題目由教師先確認：</b>建議題目僅供參考，請依學生生活經驗與可取得的資料調整，可加入學校附近的社區或農場。</li>
+    <li><b>一讚一問要具體：</b>可先示範：「讚：你們想到請居民當導覽員，可以增加收入。問：遊客太多時，怎麼保護蓮田？」</li>
+  </ul>
+  <h3>教學資源</h3>
+  <ul>
+    <li><a href="https://fae.moa.gov.tw/" target="_blank" rel="noopener">農業部食農教育資訊整合平臺</a>：農產地圖與物產資料，查在地物產的起點</li>
+    <li><a href="https://kid.afa.gov.tw/" target="_blank" rel="noopener">農糧署兒童版</a>：兒童取向的農產品知識</li>
+    <li><a href="https://www.fa.gov.tw/list.php?font-size=l&id=&subtheme=185&theme=web_structure" target="_blank" rel="noopener">漁業署食魚文化推廣教材</a>：漁業與海鮮相關素材</li>
+    <li><a href="https://recreation.forest.gov.tw/Forest/RA?typ_id=0100001" target="_blank" rel="noopener">太平山國家森林遊樂區</a>、<a href="https://recreation.forest.gov.tw/Forestry/CP?typ_id=0800021" target="_blank" rel="noopener">林田山林業文化園區</a>：整理表示範與比較案例</li>
+    <li><a href="https://learning.ardswc.gov.tw/" target="_blank" rel="noopener">水保酷學堂</a>：坡地利用與水土保持，可協助分析「面臨的問題」</li>
+  </ul>
+</section>
+
+<!-- ===================== 學習單五 正面 ===================== -->
+<div class="sheet" id="ws5">
+  <div class="head">
+    <div><div class="sub">社會第三單元 探究實作｜學習單五（第 1 節）</div><h2>物產偵探：發現問題與蒐集資料</h2></div>
+    <div class="who">五年＿＿班　座號＿＿　姓名＿＿＿＿＿＿　第＿＿組</div>
+  </div>
+
+  <h3>任務一｜物產偵探：從包裝和菜單找線索</h3>
+  <table>
+    <tr><th style="width:17%">物品／菜色</th><th style="width:13%">物產名稱</th><th style="width:13%">類別<br><span class="tip">農畜漁林礦</span></th><th style="width:13%">產地</th><th style="width:22%">已知資訊<br><span class="tip">包裝上看得到的</span></th><th>想查證的問題</th></tr>
+    <tr><td class="h16"></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="h16"></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h3>任務二｜單元整理表示範：林田山</h3>
+  <table>
+    <tr><th style="width:13%">產業</th><th>為什麼能發展？<br><span class="tip">自然、人文條件</span></th><th>帶來哪些好處？</th><th>面臨什麼問題？</th><th>可以如何改善？</th></tr>
+    <tr><td>林業<br>（林田山）</td><td class="h20"></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h3>任務三｜我們的探究題目</h3>
+  <p class="chk">□ 觀音蓮花　□ 新屋永安漁港的漁業　□ 復興區拉拉山水蜜桃　□ 龍潭茶　□ 其他：＿＿＿＿＿＿</p>
+  <p><b>探究問題：</b><span class="fill l"></span> 如何兼顧產業發展與地方永續？</p>
+  <p><b>我負責：</b>□ 查資料　□ 記錄　□ 檢核可信度　□ 準備發表</p>
+
+  <h3>任務四｜資料蒐集紀錄與可信度檢核</h3>
+  <table>
+    <tr><th style="width:20%">資料來源<br><span class="tip">網站名稱／書／照片／訪談</span></th><th>我找到的重點</th><th style="width:25%">可信度檢核</th></tr>
+    <tr><td class="h24"></td><td></td><td class="chk">□ 政府或專業單位<br>□ 有日期<br>□ 有證據或數據</td></tr>
+    <tr><td class="h24"></td><td></td><td class="chk">□ 政府或專業單位<br>□ 有日期<br>□ 有證據或數據</td></tr>
+  </table>
+  <p><b>還沒查到、需要再查證的：</b><span class="fill l"></span><span class="fill l"></span></p>
+  <span class="page-tag">學習單五・正面</span>
+</div>
+
+<!-- ===================== 學習單五 背面 ===================== -->
+<div class="sheet">
+  <div class="head">
+    <div><div class="sub">社會第三單元 探究實作｜學習單五（第 2 節）</div><h2>家鄉物產守護計畫：分析與反思</h2></div>
+    <div class="who">座號＿＿　姓名＿＿＿＿＿＿</div>
+  </div>
+
+  <h3>任務五｜我們組的單元整理表</h3>
+  <table>
+    <tr><th style="width:13%">物產／產業</th><th>為什麼能發展？<br><span class="tip">自然、人文條件</span></th><th>帶來哪些好處？</th><th>面臨什麼問題？</th><th>可以如何改善？</th></tr>
+    <tr><td class="h24"><br><br><br><br></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p>這項物產能在這裡發展，最主要是因為 <span class="fill l"></span>，</p>
+  <p>它面臨的問題，原因是 <span class="fill l"></span>。</p>
+
+  <h3>任務六｜畫廊漫步：一讚一問</h3>
+  <table>
+    <tr><th style="width:22%">我參觀的組別／方案</th><th>讚：這個方案好在哪裡？</th><th>問：我的疑問或建議</th></tr>
+    <tr><td class="h20"></td><td></td><td></td></tr>
+  </table>
+  <p>我們組收到的回饋中，最值得修正的是 <span class="fill l"></span>，我們可以改成 <span class="fill l"></span>。</p>
+
+  <h3>單元總結｜回到核心問題</h3>
+  <div class="box">
+    <p>臺灣的物產資源要和地方生活一起永續發展，需要 <span class="fill"></span>、<span class="fill"></span>、<span class="fill"></span> 一起努力，</p>
+    <p>因為 <span class="fill l"></span><span class="fill l"></span>。</p>
+  </div>
+
+  <h3>我的永續消費行動</h3>
+  <p>買東西時，我會注意 <span class="fill l"></span>；我願意支持 <span class="fill l"></span>。</p>
+
+  <h3>自我檢核</h3>
+  <table class="self">
+    <tr><th>我能……</th><th style="width:16%">做到了</th><th style="width:16%">還要加油</th></tr>
+    <tr><td>找到有來源的資料，並檢核它可不可信</td><td>□</td><td>□</td></tr>
+    <tr><td>用整理表說出物產發展的原因、好處、問題與改善方式</td><td>□</td><td>□</td></tr>
+    <tr><td>和組員設計兼顧環境、生計與文化的方案</td><td>□</td><td>□</td></tr>
+    <tr><td>給別組具體的讚和建議，並說出我的生活行動</td><td>□</td><td>□</td></tr>
+  </table>
+  <span class="page-tag">學習單五・背面</span>
+</div>
+
+<!-- ===================== 小組提案單 ===================== -->
+<div class="sheet" id="ws6">
+  <div class="head">
+    <div><div class="sub">社會第三單元 探究實作｜小組提案單（第 2 節）</div><h2>家鄉物產守護計畫</h2></div>
+    <div class="who">第＿＿組　組員：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</div>
+  </div>
+
+  <table>
+    <tr><th style="width:22%">方案名稱</th><td class="h12"></td></tr>
+    <tr><th>物產／地方</th><td class="h12"></td></tr>
+    <tr><th>想解決的問題</th><td class="h16"></td></tr>
+  </table>
+
+  <h3>具體做法（至少 3 點：誰？做什麼？在哪裡？）</h3>
+  <p>1. <span class="fill l"></span><span class="fill l"></span></p>
+  <p>2. <span class="fill l"></span><span class="fill l"></span></p>
+  <p>3. <span class="fill l"></span><span class="fill l"></span></p>
+
+  <h3>需要誰一起合作？（可複選）</h3>
+  <p class="chk">□ 政府　□ 當地居民　□ 農民／漁民／業者　□ 消費者　□ 學校和學生　□ 其他：＿＿＿＿＿＿</p>
+
+  <h3>三面檢核：方案能兼顧嗎？</h3>
+  <table>
+    <tr><th style="width:18%">面向</th><th>我們的方案怎麼做到？</th><th style="width:20%">自評</th></tr>
+    <tr><td>環境保護</td><td class="h16"></td><td>☆☆☆</td></tr>
+    <tr><td>居民生計</td><td class="h16"></td><td>☆☆☆</td></tr>
+    <tr><td>文化或教育</td><td class="h16"></td><td>☆☆☆</td></tr>
+  </table>
+
+  <h3>可能遇到的困難與解決辦法</h3>
+  <table>
+    <tr><th style="width:50%">困難</th><th>解決辦法</th></tr>
+    <tr><td class="h16"></td><td></td></tr>
+  </table>
+
+  <h3>方案示意圖（畫出你們的計畫）</h3>
+  <div class="box" style="height:46mm"></div>
+  <span class="page-tag">小組提案單</span>
+</div>
+
+<!-- ===================== 教師參考 ===================== -->
+<section class="card" id="key">
+  <h2>教師參考（不需列印給學生）</h2>
+  <h3>任務二 林田山整理表示例</h3>
+  <div class="tbl-wrap"><table class="key">
+    <tr><th>產業</th><th>為什麼能發展？</th><th>帶來哪些好處？</th><th>面臨什麼問題？</th><th>可以如何改善？</th></tr>
+    <tr><td>林業（林田山）</td><td>山區森林資源豐富；興建運材鐵道把木材運出</td><td>工作機會多，曾聚集兩千多人，形成林業聚落</td><td>森林大火、政府禁伐，產業沒落、人口外流</td><td>保留特色建築，轉型為林業文化園區，保存林業文化</td></tr>
+  </table></div>
+  <p class="note">內容取自共備文件；其他組別的整理表請依學生查到的資料評量，重點是五欄之間的因果是否合理、資料是否有來源。</p>
+</section>
+
+</main>
+<script>
+document.getElementById('printSheets').addEventListener('click',function(){document.body.classList.add('print-sheets');window.print();});
+document.getElementById('printAll').addEventListener('click',function(){document.body.classList.remove('print-sheets');window.print();});
+window.addEventListener('afterprint',function(){document.body.classList.remove('print-sheets');});
+</script>
+</body></html>
