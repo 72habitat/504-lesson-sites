@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-2 山中的故事 課程活動</title>
+<meta name="description" content="社會單元三 3-2〈山中的故事〉三節課程活動設計與兩份 A4 學習單（南一版五上）">
+<style>
+:root{--bg:#E8ECE3;--paper:#FBFCF9;--ink:#3F4A31;--green:#4F5C3D;--muted:#6E6458;--line:#D3DAC8;--soft:#EEF1E9;--accent:#798D5E;--warm:#B8873A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;font-size:16px}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+h1,h2,h3,h4{line-height:1.4;margin:0}
+h1{font-size:30px}
+h2{font-size:23px;margin:0 0 12px}
+h3{font-size:18px;margin:18px 0 8px}
+p{margin:6px 0}
+a{color:var(--accent)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0}
+.eyebrow{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:700}
+.tag{display:inline-block;background:var(--soft);color:var(--accent);border-radius:20px;padding:2px 11px;font-size:13px;margin:2px 4px 2px 0}
+.toolbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:var(--green);color:#fff;border:0;border-radius:9px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;font-size:15px}
+.btn.secondary{background:var(--paper);color:var(--green);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;margin:8px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--soft);font-weight:700}
+.tbl-wrap{overflow-x:auto}
+.plan td:first-child{white-space:nowrap;width:64px;text-align:center;font-weight:700;color:var(--accent)}
+.plan td:nth-child(2){min-width:280px}
+.plan td:nth-child(3){min-width:170px;color:var(--muted)}
+.plan td:nth-child(4){min-width:150px;font-size:14px}
+.code{font-size:12.5px;color:var(--warm);display:block;margin-top:4px}
+.goal{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:10px 0}
+.note{border-left:3px solid var(--warm);padding-left:12px;color:var(--muted);margin:8px 0}
+ul{margin:6px 0;padding-left:22px}
+.overview td:first-child{font-weight:700;white-space:nowrap}
+
+/* ---------- A4 學習單 ---------- */
+.sheet{background:#fff;color:#222;width:210mm;max-width:100%;min-height:297mm;margin:22px auto;padding:12mm 13mm;box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:11.5pt;line-height:1.55}
+.sheet h2{font-size:17pt;margin:0;color:#222}
+.sheet h3{font-size:12.5pt;margin:9px 0 5px;padding:2px 8px;background:#EEF1E9;border-left:4px solid #4F5C3D;color:#222}
+.sheet table{margin:4px 0}
+.sheet th,.sheet td{border:1px solid #777;padding:4px 6px;font-size:10.5pt}
+.sheet th{background:#F1F3EE}
+.sheet .head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #333;padding-bottom:6px;margin-bottom:6px;gap:10px;flex-wrap:wrap}
+.sheet .who{font-size:10.5pt;white-space:nowrap}
+.sheet .sub{font-size:9.5pt;color:#555}
+.sheet .tip{font-size:9.5pt;color:#555}
+.fill{display:inline-block;border-bottom:1px solid #333;min-width:28mm}
+.fill.s{min-width:16mm}.fill.l{min-width:52mm}
+.ln{border-bottom:1px dashed #999;height:8mm}
+.box{border:1px solid #777;border-radius:6px;padding:5px 8px}
+.h12{height:12mm}.h16{height:16mm}.h20{height:20mm}.h24{height:24mm}
+.chain{display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr;align-items:center;gap:2px;margin:4px 0}
+.chain .box{min-height:22mm;font-size:9.5pt;color:#555}
+.arrow{text-align:center;font-weight:700}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chk{font-size:10.5pt}
+.ticket{border:2px dashed #555;border-radius:8px;padding:6px 10px;margin-top:6px}
+.self td{text-align:center}.self td:first-child{text-align:left}
+.page-tag{float:right;font-size:9pt;color:#777}
+.key td{font-size:10pt}
+
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff}
+  main{max-width:none;padding:0}
+  .toolbar,.no-print{display:none!important}
+  .sheet{box-shadow:none;margin:0;width:210mm;height:297mm;min-height:0;overflow:hidden;page-break-after:always;break-after:page}
+  body.print-sheets .card{display:none}
+  body:not(.print-sheets) .card{break-inside:avoid-page;border:none;margin:0 12mm;padding:8mm 0}
+  body:not(.print-sheets) .card:first-of-type{padding-top:12mm}
+}
+@media (max-width:640px){.sheet{padding:6mm;font-size:10.5pt}.chain{grid-template-columns:1fr;}.chain .arrow{transform:rotate(90deg)}.cols2{grid-template-columns:1fr}}
+.chain5{display:grid;grid-template-columns:1fr 14px 1fr 14px 1fr 14px 1fr 14px 1fr;align-items:center;gap:2px;margin:4px 0}
+.chain5 .box{min-height:16mm}
+.slot{display:inline-block;width:16mm;height:9mm;border:1px solid #333;border-radius:4px;vertical-align:middle;margin:2px 0}
+.flow td{font-size:11pt;padding:6px 8px}
+@media (max-width:640px){.chain5{grid-template-columns:1fr}.chain5 .arrow{transform:rotate(90deg)}}
+</style></head>
+<body>
+<main>
+
+<div class="toolbar no-print">
+  <a class="btn secondary" href="index.html">← 回首頁</a>
+  <a class="btn secondary" href="#plan">課程活動</a>
+  <a class="btn secondary" href="#ws3">學習單三</a>
+  <a class="btn secondary" href="#ws4">學習單四</a>
+  <a class="btn secondary" href="#key">教師參考答案</a>
+  <button class="btn" id="printSheets">列印學習單（A4）</button>
+  <button class="btn secondary" id="printAll">列印全部</button>
+</div>
+
+<section class="card">
+  <div class="eyebrow">南一版五上｜社會第三單元 臺灣的物產資源</div>
+  <h1>3-2 山中的故事｜課程活動與學習單</h1>
+  <p><span class="tag">3 節（每節 40 分鐘）</span><span class="tag">學習單 2 份（各 A4 正反面）</span><span class="tag">課本 p.58–65</span></p>
+  <p class="note">依〈五上南一_與AI協作單元案例（第三單元）〉共備內容整理：目標 3 整合家綺、椀婷的活動設計，目標 4 採家如的活動設計，並加入椀婷檢視時建議補強的「花蓮礦產開採爭議（p.63）」。單元分析建議把「鐵道與聚落」提前，讓「資源開發 → 交通與聚落 → 開發問題 → 產業轉型」的因果更清楚，本設計即依此順序。頁碼依共備文件所列，請以手邊課本核對。</p>
+  <p class="note"><b>與探究實作的分工：</b>單元探究實作另見〈探究實作〉頁（2 節）。本課目標 4 濃縮為 1 節，聚焦三個林業聚落的比較、礦業爭議與土地再利用方案評估；生活行動移到探究實作的學習單五，Kahoot! 改為課後複習。</p>
+
+  <h3>核心問題</h3>
+  <p>交通運輸與山林礦產的開採如何形塑聚落的興衰？當資源開發面臨環境衝擊與耗竭時，人們如何透過土地利用與產業轉型，實現地方的永續價值？</p>
+
+  <h3>對應領綱條目</h3>
+  <div class="tbl-wrap"><table class="overview">
+    <tr><td>核心素養</td><td>社-E-A2 敏覺居住地方的社會、自然與人文環境變遷，關注生活問題及其影響，並思考解決方法。<br>社-E-C1 ……關懷自然環境與人類社會的永續發展。</td></tr>
+    <tr><td>學習表現</td><td>1b-Ⅲ-2 理解各種事實或社會現象的關係，並歸納出其間的關係或規律性。<br>3b-Ⅲ-2 摘取及整理社會議題相關資料的重點，判讀其正確性及價值，並加以描述和解釋。<br>3d-Ⅲ-2 探究社會議題發生的原因與影響，評估與選擇合適的解決方案。</td></tr>
+    <tr><td>學習內容</td><td>Ab-Ⅲ-2 交通運輸與產業發展會影響城鄉與區域間的人口遷移及連結互動。<br>Ca-Ⅲ-2 土地利用反映過去和現在的環境變遷，以及對未來的展望。<br>Ce-Ⅲ-2 在經濟發展過程中，資源的使用會產生意義與價值的轉變，但也可能引發爭議。</td></tr>
+  </table></div>
+
+  <h3>任務導向學習目標</h3>
+  <div class="goal"><b>目標 3（第 1–2 節）</b>閱讀林礦業發展資料與課文，理解山區資源開發與鐵道興建的關聯；觀察鐵道分布圖與山城今昔照片，比較產業衰退前後的人口及土地利用變化，運用因果關係圖串聯「資源開發、交通興建、就業增加、人口聚集與聚落發展」，歸納交通運輸、產業發展與人口遷移、區域連結的關係。<span class="code">社-E-A2、1b-Ⅲ-2、Ab-Ⅲ-2、Ca-Ⅲ-2</span></div>
+  <div class="goal"><b>目標 4（第 3 節）</b>閱讀太平山、林田山或車埕等林礦業聚落轉型的文本，運用 T 圖表摘取及整理林場與礦區開發及轉型相關資料，探究資源開採引發環境爭議與產業沒落的原因，並透過 PMI 三面分析評估不同土地再利用方案（優點、限制及待釐清問題），運用句型鷹架提出維護永續發展的具體看法與生活行動。<span class="code">社-E-C1、社-E-A2、3b-Ⅲ-2、3d-Ⅲ-2、Ca-Ⅲ-2、Ce-Ⅲ-2</span></div>
+
+  <h3>節次總覽</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>節次</th><th>主題</th><th>主要策略</th><th>學習單</th></tr>
+    <tr><td>第 1 節</td><td>深山裡的鐵道密碼：資源開發與聚落興起</td><td>生活經驗連結、六何法閱讀、地圖三層次提問、因果卡片串聯</td><td>學習單三 正面</td></tr>
+    <tr><td>第 2 節</td><td>繁華落盡：產業變遷與土地利用</td><td>今昔照片對比、拼圖法閱讀、今昔 T 圖表、完整因果圖</td><td>學習單三 背面</td></tr>
+    <tr><td>第 3 節</td><td>山城的轉型與選擇</td><td>課前預習填空、聚落比較表、T 圖表、礦業爭議表態、PMI 評估方案、句型鷹架</td><td>學習單四 正反面</td></tr>
+  </table></div>
+</section>
+
+<section class="card" id="plan">
+  <div class="eyebrow">目標 3｜第 1 節</div>
+  <h2>第 1 節　深山裡的鐵道密碼：資源開發與聚落興起</h2>
+  <p>本節重點：閱讀資料與地圖，理解「先有資源，才有鐵道」；體會早期山城因就業而人口聚集的繁榮。</p>
+  <p class="tag">準備：阿里山小火車／平溪線／九份老街照片、臺灣早期主要林場與鐵路分布圖、北部礦區分布圖、因果關係卡片（每組一套）、學習單三</p>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>5′</td><td><b>引起動機｜山裡的鋼鐵軌道</b><br>投影阿里山小火車、平溪線、九份的現況照片，請學生分享旅遊經驗，並在學習單「暖身」推測這些高山鐵路最初的用途。</td><td>這些地方都在崎嶇的山上，為什麼百年前人們要在懸崖峭壁間鋪鐵軌？<br>它們當初是為了載觀光客嗎？</td><td>口頭診斷先備概念<span class="code">社-E-A2</span></td></tr>
+    <tr><td>15′</td><td><b>文本閱讀｜六何法摘重點</b><br>小組共讀課本 p.58–60（林業）或 p.62–64（礦業與鐵道），用六何法表摘錄：山裡有什麼資源？誰來開採？什麼時候？在哪裡？為什麼要開採？沉重的木材、礦石怎麼運下山？</td><td>沒有鐵道，龐大的木材與沉重的煤礦能順利運出深山嗎？</td><td>學習單六何法表：能摘取正確重點<span class="code">1b-Ⅲ-2</span></td></tr>
+    <tr><td>10′</td><td><b>地圖偵探｜三層次提問</b><br>投影林場與鐵路分布圖、礦區分布圖，小組觀察路線與林場、礦區的空間重疊。<br>‧事實：山上有哪些資源？<br>‧關係：鐵道終點連到哪裡？（如阿里山連到嘉義、平溪連到基隆一帶）<br>‧推論：鐵道解決了什麼問題？</td><td>鐵路和林場、礦區的位置有什麼關係？<br>鐵道把山上和哪些地方連結起來？</td><td>指圖說明鐵道與資源、區域連結的關係<span class="code">Ab-Ⅲ-2</span></td></tr>
+    <tr><td>8′</td><td><b>因果卡片串聯</b><br>各組拿到 5 張卡片：發現珍貴木材／礦產、興建臺車與森林鐵道、創造大量工作機會、外地工人移入定居、形成市集學校與聚落。用箭頭由左到右排成因果鏈，貼在小白板（或 Padlet），並抄到學習單。抽點小組說明。</td><td>為什麼「交通興建」會帶動「人口聚集」？<br>山上需要哪些人工作？（開火車、砍樹、蓋房子、煮飯的人）</td><td>因果鏈排列與口頭說明<span class="code">1b-Ⅲ-2、Ab-Ⅲ-2</span></td></tr>
+    <tr><td>2′</td><td><b>總結與預告</b><br>統整：鐵道因「產業資源」而生，聚落因「交通與就業」而聚。<br>預告：如果木頭砍完、礦挖空了，山城會怎麼樣？</td><td>—</td><td>—</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <div class="eyebrow">目標 3｜第 2 節</div>
+  <h2>第 2 節　繁華落盡：產業變遷與土地利用</h2>
+  <p>本節重點：用今昔照片比較產業衰退前後的人口與土地利用，補齊完整因果圖，歸納交通、產業與人口遷移的規律。</p>
+  <p class="tag">準備：車埕貯木池昔今照片、礦區全盛期與停採後照片、林場／礦區變遷短文（兩種）、學習單三</p>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>5′</td><td><b>引起動機｜一張黑白老照片的疑問</b><br>投影南投車埕貯木池昔日擠滿木材的老照片，對照今日的照片；或礦區全盛期與停採後的街景。</td><td>當政府禁伐天然林、礦坑封閉後，這裡的人口和土地發生了什麼變化？</td><td>口頭觀察<span class="code">Ca-Ⅲ-2</span></td></tr>
+    <tr><td>15′</td><td><b>拼圖法閱讀｜今昔 T 圖表</b><br>奇數組讀「林場變遷：車埕／太平山」，偶數組讀「礦區變遷：金瓜石、九份」。依學習單從人口、土地利用、交通用途、居民工作四面向，比較「昔（全盛期）」與「今」，並寫下中間的轉折原因。</td><td>昔日這塊土地用來做什麼？現在呢？<br>人口變多還是變少？為什麼？</td><td>T 圖表：能正確比較今昔變化<span class="code">Ca-Ⅲ-2、1b-Ⅲ-2</span></td></tr>
+    <tr><td>15′</td><td><b>完整因果圖｜興起、衰退、轉型</b><br>回到第 1 節的因果鏈，補上後半段：資源耗竭／禁伐停採 → 就業減少 → 人口外流 → 聚落沒落 → 土地再利用 → 新的區域連結。小組完成學習單代號填空，再一起寫下「小組大發現」。</td><td>產業衰退後，原本載木材、煤礦的火車變成什麼？<br>用一句話說出交通、產業和人口之間的關係。</td><td>因果圖與歸納句<span class="code">1b-Ⅲ-2、Ab-Ⅲ-2、Ca-Ⅲ-2、社-E-A2</span></td></tr>
+    <tr><td>5′</td><td><b>總結與延伸</b><br>統整：土地利用反映不同時代人與自然互動的選擇。<br>延伸思考：觀光是山城唯一的路嗎？（帶入下一節）</td><td>如何讓地方生活和自然保育都能永續？</td><td>—</td></tr>
+  </table></div>
+  <p class="note">家綺版提醒：第 2 節學生容易急著討論「車埕現在很漂亮」，請先聚焦「停止開採時產業沒落與人口外流的危機」，建立昔今轉折的時序概念，再把轉型方案留到第 3 節探討。</p>
+</section>
+
+<section class="card">
+  <div class="eyebrow">目標 4｜第 3 節</div>
+  <h2>第 3 節　山城的轉型與選擇</h2>
+  <p>本節重點：整理太平山、林田山、車埕沒落與轉型的原因，認識仍在進行的礦業爭議，並用 PMI 評估土地再利用方案，提出永續主張。</p>
+  <p class="tag">課前：學生預習課本 p.60、64–65，完成學習單四「任務一」填空（回家作業）</p>
+  <p class="tag">準備：太平山／林田山／車埕補充資料、方案抽籤卡、學習單四</p>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>3′</td><td><b>回顧與檢查預習</b><br>用上節因果圖快速回顧山城興衰，抽問預習填空答案。</td><td>除了資源減少，還有哪些原因讓林場、礦區停業？</td><td>預習填空<span class="code">3b-Ⅲ-2</span></td></tr>
+    <tr><td>12′</td><td><b>【共學】聚落比較表</b><br>四人一組，每人負責一欄，完成太平山、林田山、車埕的比較表（過去經濟活動、沒落原因、現今轉型），寫出三地沒落的共同原因。</td><td>三個聚落沒落的原因有什麼共同點？不同點？</td><td>比較表<span class="code">3b-Ⅲ-2、Ca-Ⅲ-2</span></td></tr>
+    <tr><td>5′</td><td><b>T 圖表：開發期 vs. 轉型期</b><br>全班共同整理：開發期的經濟效益與環境代價、轉型期的生態保育與多元發展，學生寫在學習單。</td><td>開發帶來哪些好處？付出哪些代價？</td><td>T 圖表<span class="code">Ce-Ⅲ-2</span></td></tr>
+    <tr><td>7′</td><td><b>爭議小討論｜仍在開採的礦產</b><br>閱讀 p.63 花蓮大理石與水泥石灰石開採，用表態光譜（支持、有條件支持、反對）站位，請 2–3 位學生說理由，再個人寫下支持的理由、擔心的地方與需要的規範。</td><td>同一座山，對工廠、居民、生態各有什麼意義？</td><td>表態與理由<span class="code">Ce-Ⅲ-2、3d-Ⅲ-2</span></td></tr>
+    <tr><td>11′</td><td><b>PMI 評估土地再利用方案＋句型鷹架</b><br>各組抽一個方案：①森林遊樂區　②文化園區　③鐵道與木業觀光　④封山森林復育。小組討論 PMI（6′），再由個人用句型寫下永續主張（3′），抽 1–2 組分享（2′）。</td><td>這個方案對居民生計、環境、文化各有什麼影響？<br>土地再利用要兼顧哪兩件事？</td><td>PMI 評估表、句型主張<span class="code">3d-Ⅲ-2、社-E-C1、社-E-A2</span></td></tr>
+    <tr><td>2′</td><td><b>總結</b><br>開發與保育不是二選一，選擇合適的土地再利用方式，才能兼顧居民生計、文化與生態。預告探究實作：換我們為家鄉物產想辦法。</td><td>—</td><td>繳交學習單四</td></tr>
+  </table></div>
+  <p class="note">時間不夠時：預習填空務必在課前完成；礦業爭議可縮為全班表態、理由改回家寫。Kahoot!《山林聚落守護者》可作為課後複習（題例：「車埕的貯木池在轉型前主要功能是什麼？」「為什麼要禁止砍伐天然林？」）。</p>
+</section>
+
+<section class="card">
+  <h2>評量判準</h2>
+  <div class="tbl-wrap"><table>
+    <tr><th>評量面向</th><th>達成表現</th><th>證據來源</th><th>領綱</th></tr>
+    <tr><td>資料摘取</td><td>能用六何法、填空與比較表，正確摘取林礦業開發與轉型的重點。</td><td>學習單三 任務一、學習單四 任務一、二</td><td>3b-Ⅲ-2</td></tr>
+    <tr><td>交通與聚落關係</td><td>能說明「先有資源需求，才興建鐵道」，並指出鐵道帶來的區域連結。</td><td>學習單三 任務二、三</td><td>Ab-Ⅲ-2</td></tr>
+    <tr><td>今昔變遷</td><td>能從人口與土地利用比較產業衰退前後的變化，並說出轉折原因。</td><td>學習單三 今昔 T 圖表</td><td>Ca-Ⅲ-2</td></tr>
+    <tr><td>因果歸納</td><td>能正確串聯興起、衰退、轉型的因果鏈，並用一句話歸納規律。</td><td>學習單三 完整因果圖、小組大發現</td><td>1b-Ⅲ-2、社-E-A2</td></tr>
+    <tr><td>爭議與方案評估</td><td>能說出資源開發的不同價值與爭議，並用 PMI 評估土地再利用方案。</td><td>學習單四 爭議討論、PMI 表</td><td>3d-Ⅲ-2、Ce-Ⅲ-2</td></tr>
+    <tr><td>永續主張</td><td>能用句型完整表達兼顧生計與保育的看法。</td><td>學習單四 句型鷹架</td><td>社-E-C1</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>教學提醒</h2>
+  <ul>
+    <li><b>避免「交通先於產業」的直覺誤區：</b>學生常以為「先蓋火車站才有人住」。可追問：「如果深山裡沒有紅檜和煤礦，政府會花大錢爬陡坡鋪鐵軌嗎？」建立「需求（資源）帶動建設（交通）」的觀念。</li>
+    <li><b>把抽象詞具體化：</b>「就業機會增加」說成「需要開火車、砍樹、幫工人蓋房子和煮飯的人」；「區域連結」說成「山上的木頭透過鐵路送到山下的城鎮或港口」。</li>
+    <li><b>因果卡片先拼再寫：</b>理解較慢的學生先用實體卡片排列、討論，確定順序通順後再填入學習單。</li>
+    <li><b>第 2 節先談危機、再談轉型：</b>先建立昔今轉折的時序概念，轉型方案留到第 3 節。</li>
+    <li><b>轉型不只有觀光：</b>學生容易認為「變成觀光區」就是唯一答案，PMI 時要引導思考觀光的限制（垃圾、交通壅塞、環境承載力），並比較文化保存、森林復育等方案。</li>
+    <li><b>正向看待山城沒落：</b>討論時學生容易只覺得悲觀，可引導看見「人與自然共存的新價值」。</li>
+    <li><b>礦業爭議要呈現多方觀點：</b>花蓮礦業涉及就業、產業需求、生態與原住民族土地等面向，請避免給標準答案，重點是理由與規範。</li>
+  </ul>
+  <h3>教學資源</h3>
+  <ul>
+    <li><a href="https://recreation.forest.gov.tw/Forest/RA?typ_id=0100001" target="_blank" rel="noopener">太平山國家森林遊樂區</a>：林業歷史、森林鐵道與遊憩資料</li>
+    <li><a href="https://recreation.forest.gov.tw/Forestry/CP?typ_id=0800021" target="_blank" rel="noopener">林田山林業文化園區</a>：林場發展、聚落與文化保存，可與太平山比較</li>
+    <li><a href="https://www.taiwan.net.tw/m1.aspx?id=A12-00304&sNo=0001016" target="_blank" rel="noopener">車埕木業展示館</a>、<a href="https://www.taiwan.net.tw/m1.aspx?id=a12-00307&sno=0001016" target="_blank" rel="noopener">車埕貯木池</a>：木業、運輸與土地利用今昔</li>
+    <li><a href="https://theme.sunmoonlake.gov.tw/sunmoonlake720/location-1/" target="_blank" rel="noopener">日月潭 720 環景</a>：含車埕影像，可虛擬踏查</li>
+    <li><a href="https://www.gep.vm.ntpc.gov.tw/" target="_blank" rel="noopener">新北市立黃金博物館數位博物館</a>：礦業景觀、礦工生活與山城轉型</li>
+    <li><a href="https://media.forest.gov.tw/category.php" target="_blank" rel="noopener">林業及自然保育署影音資訊平台</a>：可節選運材、林場生活及轉型片段</li>
+  </ul>
+</section>
+
+<!-- ===================== 學習單三 正面 ===================== -->
+<div class="sheet" id="ws3">
+  <div class="head">
+    <div><div class="sub">社會 3-2 山中的故事｜學習單三（第 1 節）</div><h2>深山裡的鐵道密碼</h2></div>
+    <div class="who">五年＿＿班　座號＿＿　姓名＿＿＿＿＿＿　第＿＿組</div>
+  </div>
+
+  <h3>暖身｜山裡的鋼鐵軌道</h3>
+  <p>我去過／聽過的山上鐵道：<span class="fill"></span>　我猜它最初是用來 <span class="fill l"></span>。</p>
+
+  <h3>任務一｜六何法摘重點</h3>
+  <p class="chk">我們組閱讀：□ 林業（課本 p.58–60）　□ 礦業與鐵道（課本 p.62–64）</p>
+  <table>
+    <tr><th style="width:22%">六何</th><th>我從課文找到的重點</th></tr>
+    <tr><td>何事：山裡有什麼資源？</td><td class="h12"></td></tr>
+    <tr><td>何人：誰來開採？</td><td class="h12"></td></tr>
+    <tr><td>何時：什麼時候開始？</td><td class="h12"></td></tr>
+    <tr><td>何地：在哪裡？</td><td class="h12"></td></tr>
+    <tr><td>為何：為什麼要開採？</td><td class="h12"></td></tr>
+    <tr><td>如何：資源怎麼運下山？</td><td class="h12"></td></tr>
+  </table>
+
+  <h3>任務二｜地圖偵探：三層次提問</h3>
+  <table>
+    <tr><th style="width:22%">層次</th><th style="width:36%">問題</th><th>我的答案</th></tr>
+    <tr><td>事實</td><td>地圖上，山區有哪些資源？</td><td class="h12"></td></tr>
+    <tr><td>關係</td><td>鐵道的終點連到哪裡？把山和哪些地方連起來？</td><td class="h12"></td></tr>
+    <tr><td>推論</td><td>如果沒有鐵道，木材和礦石能順利運出深山嗎？為什麼？</td><td class="h16"></td></tr>
+  </table>
+
+  <h3>任務三｜因果卡片串聯：山城是怎麼形成的？</h3>
+  <p class="tip">把代號依因果順序填入方框：A 外地工人移入定居　B 發現珍貴木材／礦產　C 形成市集、學校與聚落　D 興建臺車與森林鐵道　E 創造大量工作機會</p>
+  <div class="chain5">
+    <div class="box"></div><div class="arrow">→</div><div class="box"></div><div class="arrow">→</div><div class="box"></div><div class="arrow">→</div><div class="box"></div><div class="arrow">→</div><div class="box"></div>
+  </div>
+  <p>為什麼「交通興建」會帶動「人口聚集」？因為 <span class="fill l"></span><span class="fill l"></span>。</p>
+  <span class="page-tag">學習單三・正面</span>
+</div>
+
+<!-- ===================== 學習單三 背面 ===================== -->
+<div class="sheet">
+  <div class="head">
+    <div><div class="sub">社會 3-2 山中的故事｜學習單三（第 2 節）</div><h2>繁華落盡：山城的今與昔</h2></div>
+    <div class="who">座號＿＿　姓名＿＿＿＿＿＿</div>
+  </div>
+
+  <h3>任務四｜今昔 T 圖表</h3>
+  <p class="chk">我們組閱讀：□ 林場（車埕／太平山）　□ 礦區（金瓜石、九份）</p>
+  <table>
+    <tr><th style="width:16%">比較面向</th><th style="width:32%">昔（產業全盛期）</th><th style="width:20%">轉折原因</th><th>今</th></tr>
+    <tr><td>人口</td><td class="h16"></td><td rowspan="4"></td><td></td></tr>
+    <tr><td>土地利用</td><td class="h16"></td><td></td></tr>
+    <tr><td>交通用途</td><td class="h16"></td><td></td></tr>
+    <tr><td>居民工作</td><td class="h16"></td><td></td></tr>
+  </table>
+
+  <h3>任務五｜完整因果圖：興起、衰退、轉型</h3>
+  <p class="tip">代號：F 就業減少　G 土地再利用（觀光、保育、文化園區）　H 資源耗竭或禁伐、停採　I 人口外流、聚落沒落　J 形成新的區域連結</p>
+  <table class="flow">
+    <tr><th style="width:14%">興起</th><td>資源開發 → 交通興建 → 就業增加 → 人口聚集、聚落發展</td></tr>
+    <tr><th>衰退</th><td><span class="slot"></span> → <span class="slot"></span> → <span class="slot"></span></td></tr>
+    <tr><th>轉型</th><td><span class="slot"></span> → <span class="slot"></span></td></tr>
+  </table>
+  <p>產業衰退後，原本載木材、礦石的火車，現在變成 <span class="fill l"></span>。</p>
+
+  <h3>小組大發現</h3>
+  <p>交通運輸與產業發展會影響 <span class="fill"></span> 的移動，也會改變 <span class="fill"></span> 的使用方式。</p>
+  <p>我們的例子：<span class="fill l"></span><span class="fill l"></span></p>
+
+  <h3>延伸思考</h3>
+  <p>觀光是山城唯一的路嗎？我的想法：<span class="fill l"></span><span class="fill"></span></p>
+
+  <h3>自我檢核</h3>
+  <table class="self">
+    <tr><th>我能……</th><th style="width:16%">做到了</th><th style="width:16%">還要加油</th></tr>
+    <tr><td>說明為什麼山區會興建鐵道（先有資源，才有鐵道）</td><td>□</td><td>□</td></tr>
+    <tr><td>比較產業衰退前後的人口與土地利用變化</td><td>□</td><td>□</td></tr>
+    <tr><td>用因果圖說出山城興起、衰退、轉型的過程</td><td>□</td><td>□</td></tr>
+  </table>
+  <span class="page-tag">學習單三・背面</span>
+</div>
+
+<!-- ===================== 學習單四 正面 ===================== -->
+<div class="sheet" id="ws4">
+  <div class="head">
+    <div><div class="sub">社會 3-2 山中的故事｜學習單四（第 3 節）</div><h2>山城的轉型與選擇</h2></div>
+    <div class="who">五年＿＿班　座號＿＿　姓名＿＿＿＿＿＿　第＿＿組</div>
+  </div>
+
+  <h3>任務一｜課前預習：引導式填空（課本 p.60、64–65）</h3>
+  <p>1. 過去的輝煌：早期利用輕便鐵道與 <span class="fill"></span> 把木材、礦產運送下山。</p>
+  <p>2. 危機的爆發：除了資源減少，還受到 <span class="fill"></span> 意識抬頭，以及 <span class="fill"></span> 等災害的影響。</p>
+  <p>3. 華麗的轉身：失去原有產業後，許多山城朝向 <span class="fill"></span> 與地方文化保存轉型。</p>
+
+  <h3>任務二｜【共學】聚落比較表</h3>
+  <table>
+    <tr><th style="width:14%">聚落</th><th style="width:28%">過去主要經濟活動</th><th style="width:30%">產業沒落／停採原因</th><th>現今轉型風貌</th></tr>
+    <tr><td>太平山</td><td class="h16"></td><td></td><td></td></tr>
+    <tr><td>林田山</td><td class="h16"></td><td></td><td></td></tr>
+    <tr><td>南投車埕</td><td class="h16"></td><td></td><td></td></tr>
+  </table>
+  <p><b>比一比：</b>三個聚落沒落的共同原因是 <span class="fill l"></span>。</p>
+
+  <h3>任務三｜T 圖表：開發期 vs. 轉型期</h3>
+  <table>
+    <tr><th style="width:50%">資源開發期（過去）</th><th>聚落轉型期（現今）</th></tr>
+    <tr><td class="h20"><b>經濟效益：</b></td><td><b>生態保育：</b></td></tr>
+    <tr><td class="h20"><b>環境代價：</b></td><td><b>多元發展：</b></td></tr>
+  </table>
+
+  <h3>任務四｜爭議小討論：仍在開採的礦產（課本 p.63）</h3>
+  <p>花蓮的大理石與水泥石灰石開採，我的立場：□ 支持　□ 有條件支持　□ 反對</p>
+  <table>
+    <tr><th style="width:33%">支持開採的理由</th><th style="width:33%">擔心的地方</th><th>我認為需要的規範</th></tr>
+    <tr><td class="h20"></td><td></td><td></td></tr>
+  </table>
+  <span class="page-tag">學習單四・正面</span>
+</div>
+
+<!-- ===================== 學習單四 背面 ===================== -->
+<div class="sheet">
+  <div class="head">
+    <div><div class="sub">社會 3-2 山中的故事｜學習單四（第 3 節）</div><h2>我是山林聚落守護者</h2></div>
+    <div class="who">座號＿＿　姓名＿＿＿＿＿＿</div>
+  </div>
+
+  <h3>任務五｜PMI 評估土地再利用方案</h3>
+  <p class="chk">我們組的方案：□ ①森林遊樂區　□ ②文化園區　□ ③鐵道與木業觀光　□ ④封山森林復育</p>
+  <table>
+    <tr><th style="width:18%">思考面向</th><th style="width:30%">引導提問</th><th>我們的想法</th></tr>
+    <tr><td><b>P</b> 優點</td><td class="tip">對居民收入、地方發展、文化保存有什麼好處？</td><td class="h24"></td></tr>
+    <tr><td><b>M</b> 限制</td><td class="tip">可能帶來哪些問題？（垃圾、交通、生態壓力、工作機會？）</td><td class="h24"></td></tr>
+    <tr><td><b>I</b> 待釐清</td><td class="tip">還需要查證或討論什麼？（遊客量多少才不會破壞環境？）</td><td class="h24"></td></tr>
+  </table>
+  <p>我們給這個方案的評分：☆☆☆☆☆　理由：<span class="fill l"></span></p>
+
+  <h3>任務六｜句型鷹架：我的永續主張</h3>
+  <div class="box">
+    <p>過去人們為了 <span class="fill"></span> 而開採山林，雖然帶來了 <span class="fill"></span>，卻也導致了 <span class="fill"></span> 的問題。</p>
+    <p>為了達成永續發展，我認為未來的土地再利用方案應該兼顧 <span class="fill"></span> 與 <span class="fill"></span>。</p>
+    <p>我支持這個方案的原因是 <span class="fill l"></span>，</p>
+    <p>但要注意 <span class="fill l"></span>。</p>
+  </div>
+
+  <h3>自我檢核</h3>
+  <table class="self">
+    <tr><th>我能……</th><th style="width:16%">做到了</th><th style="width:16%">還要加油</th></tr>
+    <tr><td>整理太平山、林田山、車埕的沒落原因與轉型方式</td><td>□</td><td>□</td></tr>
+    <tr><td>說出資源開發的好處、代價與爭議</td><td>□</td><td>□</td></tr>
+    <tr><td>用 PMI 評估方案，並用句型說出我的永續主張</td><td>□</td><td>□</td></tr>
+  </table>
+  <span class="page-tag">學習單四・背面</span>
+</div>
+
+<!-- ===================== 教師參考答案 ===================== -->
+<section class="card" id="key">
+  <h2>教師參考答案（不需列印給學生）</h2>
+  <p class="note">以下為引導方向，請依課本實際內容調整；學生答案合理且有證據即可給分。比較表內容取自共備文件（家如版）。</p>
+  <h3>學習單三</h3>
+  <ul>
+    <li><b>因果卡片順序：</b>B → D → E → A → C</li>
+    <li><b>完整因果圖：</b>衰退 H → F → I；轉型 G → J</li>
+    <li><b>火車的新角色：</b>載運觀光客的休閒、懷舊鐵道。</li>
+    <li><b>小組大發現：</b>交通運輸與產業發展會影響<b>人口</b>的移動，也會改變<b>土地</b>的使用方式。</li>
+    <li><b>今昔 T 圖表（車埕示例）：</b>昔——人口聚集、貯木池堆滿木材、鐵道運木材、居民從事伐木與木業；轉折——禁伐天然林、九二一大地震；今——人口減少、貯木池成為觀光景點、鐵道載遊客、居民轉向觀光服務。</li>
+  </ul>
+  <h3>學習單四</h3>
+  <ul>
+    <li><b>填空：</b>1. 森林鐵路（臺車、蹦蹦車）　2. 保育（環保）；森林大火、地震、颱風　3. 觀光（生態旅遊）</li>
+  </ul>
+  <div class="tbl-wrap"><table class="key">
+    <tr><th>聚落</th><th>過去主要經濟活動</th><th>沒落原因</th><th>現今轉型</th></tr>
+    <tr><td>太平山</td><td>盛產珍貴檜木，以鐵道與蹦蹦車運材</td><td>產量下降、保育意識抬頭、鐵道遭颱風破壞</td><td>森林遊樂區</td></tr>
+    <tr><td>林田山</td><td>興盛的林業聚落，曾聚集兩千多人</td><td>森林大火、政府禁伐林木</td><td>保留特色建築，成為林業文化園區</td></tr>
+    <tr><td>南投車埕</td><td>結合鐵道與木業的聚落，設有貯木池</td><td>實施禁伐、民國 88 年九二一大地震</td><td>發展鐵道、木業與觀光的多元山城</td></tr>
+  </table></div>
+  <ul>
+    <li><b>T 圖表：</b>經濟效益——工作機會、商業繁榮；環境代價——破壞森林、水土流失、生態受損；生態保育——禁伐天然林、復育林木；多元發展——生態旅遊、保存文史與鐵道特色。</li>
+    <li><b>PMI（森林遊樂區示例）：</b>P 增加收入、帶動地方創生、親近自然認識歷史；M 垃圾、交通壅塞、人為破壞，帶來生態二次壓力；I 如何在觀光效益與環境承載力之間取得平衡？</li>
+  </ul>
+</section>
+
+</main>
+<script>
+document.getElementById('printSheets').addEventListener('click',function(){document.body.classList.add('print-sheets');window.print();});
+document.getElementById('printAll').addEventListener('click',function(){document.body.classList.remove('print-sheets');window.print();});
+window.addEventListener('afterprint',function(){document.body.classList.remove('print-sheets');});
+</script>
+</body></html>

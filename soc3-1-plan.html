@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-1 豐饒的土地 課程活動</title>
+<meta name="description" content="社會單元三 3-1〈豐饒的土地〉四節課程活動設計與兩份 A4 學習單（南一版五上）">
+<style>
+:root{--bg:#E8ECE3;--paper:#FBFCF9;--ink:#3F4A31;--green:#4F5C3D;--muted:#6E6458;--line:#D3DAC8;--soft:#EEF1E9;--accent:#798D5E;--warm:#B8873A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;font-size:16px}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+h1,h2,h3,h4{line-height:1.4;margin:0}
+h1{font-size:30px}
+h2{font-size:23px;margin:0 0 12px}
+h3{font-size:18px;margin:18px 0 8px}
+p{margin:6px 0}
+a{color:var(--accent)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0}
+.eyebrow{font-size:13px;letter-spacing:2px;color:var(--accent);font-weight:700}
+.tag{display:inline-block;background:var(--soft);color:var(--accent);border-radius:20px;padding:2px 11px;font-size:13px;margin:2px 4px 2px 0}
+.toolbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:var(--green);color:#fff;border:0;border-radius:9px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;font-size:15px}
+.btn.secondary{background:var(--paper);color:var(--green);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;margin:8px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--soft);font-weight:700}
+.tbl-wrap{overflow-x:auto}
+.plan td:first-child{white-space:nowrap;width:64px;text-align:center;font-weight:700;color:var(--accent)}
+.plan td:nth-child(2){min-width:280px}
+.plan td:nth-child(3){min-width:170px;color:var(--muted)}
+.plan td:nth-child(4){min-width:150px;font-size:14px}
+.code{font-size:12.5px;color:var(--warm);display:block;margin-top:4px}
+.goal{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:10px 0}
+.note{border-left:3px solid var(--warm);padding-left:12px;color:var(--muted);margin:8px 0}
+ul{margin:6px 0;padding-left:22px}
+.overview td:first-child{font-weight:700;white-space:nowrap}
+
+/* ---------- A4 學習單 ---------- */
+.sheet{background:#fff;color:#222;width:210mm;max-width:100%;min-height:297mm;margin:22px auto;padding:12mm 13mm;box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:11.5pt;line-height:1.55}
+.sheet h2{font-size:17pt;margin:0;color:#222}
+.sheet h3{font-size:12.5pt;margin:9px 0 5px;padding:2px 8px;background:#EEF1E9;border-left:4px solid #4F5C3D;color:#222}
+.sheet table{margin:4px 0}
+.sheet th,.sheet td{border:1px solid #777;padding:4px 6px;font-size:10.5pt}
+.sheet th{background:#F1F3EE}
+.sheet .head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #333;padding-bottom:6px;margin-bottom:6px;gap:10px;flex-wrap:wrap}
+.sheet .who{font-size:10.5pt;white-space:nowrap}
+.sheet .sub{font-size:9.5pt;color:#555}
+.sheet .tip{font-size:9.5pt;color:#555}
+.fill{display:inline-block;border-bottom:1px solid #333;min-width:28mm}
+.fill.s{min-width:16mm}.fill.l{min-width:52mm}
+.ln{border-bottom:1px dashed #999;height:8mm}
+.box{border:1px solid #777;border-radius:6px;padding:5px 8px}
+.h12{height:12mm}.h16{height:16mm}.h20{height:20mm}.h24{height:24mm}
+.chain{display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr;align-items:center;gap:2px;margin:4px 0}
+.chain .box{min-height:22mm;font-size:9.5pt;color:#555}
+.arrow{text-align:center;font-weight:700}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chk{font-size:10.5pt}
+.ticket{border:2px dashed #555;border-radius:8px;padding:6px 10px;margin-top:6px}
+.self td{text-align:center}.self td:first-child{text-align:left}
+.page-tag{float:right;font-size:9pt;color:#777}
+.key td{font-size:10pt}
+
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff}
+  main{max-width:none;padding:0}
+  .toolbar,.no-print{display:none!important}
+  .sheet{box-shadow:none;margin:0;width:210mm;height:297mm;min-height:0;overflow:hidden;page-break-after:always;break-after:page}
+  body.print-sheets .card{display:none}
+  body:not(.print-sheets) .card{break-inside:avoid-page;border:none;margin:0 12mm;padding:8mm 0}
+  body:not(.print-sheets) .card:first-of-type{padding-top:12mm}
+}
+@media (max-width:640px){.sheet{padding:6mm;font-size:10.5pt}.chain{grid-template-columns:1fr;}.chain .arrow{transform:rotate(90deg)}.cols2{grid-template-columns:1fr}}
+</style></head>
+<body>
+<main>
+
+<div class="toolbar no-print">
+  <a class="btn secondary" href="index.html">← 回首頁</a>
+  <a class="btn secondary" href="#plan">課程活動</a>
+  <a class="btn secondary" href="#ws1">學習單一</a>
+  <a class="btn secondary" href="#ws2">學習單二</a>
+  <a class="btn secondary" href="#key">教師參考答案</a>
+  <button class="btn" id="printSheets">列印學習單（A4）</button>
+  <button class="btn secondary" id="printAll">列印全部</button>
+</div>
+
+<section class="card">
+  <div class="eyebrow">南一版五上｜社會第三單元 臺灣的物產資源</div>
+  <h1>3-1 豐饒的土地｜課程活動與學習單</h1>
+  <p><span class="tag">4 節（每節 40 分鐘）</span><span class="tag">學習單 2 份（各 A4 正反面）</span><span class="tag">課本 p.50–57</span></p>
+  <p class="note">依〈五上南一_與AI協作單元案例（第三單元）〉共備內容整理：目標 1 整合如集、翠宜的活動設計，目標 2 採貞蓉的活動設計。頁碼依共備文件所列，請以手邊課本核對。</p>
+
+  <h3>核心問題</h3>
+  <p>臺灣的自然環境與科技如何孕育出多樣的農、漁、畜牧物產？面對產銷困境與環境問題時，產業又該如何轉型，兼顧民生與永續？</p>
+
+  <h3>對應領綱條目</h3>
+  <div class="tbl-wrap"><table class="overview">
+    <tr><td>核心素養</td><td>社-E-A2 敏覺居住地方的社會、自然與人文環境變遷，關注生活問題及其影響，並思考解決方法。<br>社-E-C1 ……關懷自然環境與人類社會的永續發展。</td></tr>
+    <tr><td>學習表現</td><td>1b-Ⅲ-2 理解各種事實或社會現象的關係，並歸納出其間的關係或規律性。<br>2a-Ⅲ-1 關注社會、自然、人文環境與生活方式的互動關係。</td></tr>
+    <tr><td>學習內容</td><td>Ab-Ⅲ-3 自然環境、自然災害及經濟活動，和生活空間的使用有關聯性。<br>Ae-Ⅲ-1 科學和技術發展對自然與人文環境具有不同層面的影響。<br>Ce-Ⅲ-1 經濟型態的變遷會影響人們的生活。</td></tr>
+  </table></div>
+
+  <h3>任務導向學習目標</h3>
+  <div class="goal"><b>目標 1（第 1–2 節）</b>閱讀課本圖文與海流圖，連結平日餐桌上的海鮮與農產經驗，理解氣候與地形等自然環境對臺灣農產、漁業與畜牧發展的影響，運用筆記方格表比較不同作物的生長條件，並透過分組合作學習，歸納自然條件、科技改良與經濟活動在生活空間利用上的關聯性。<span class="code">社-E-A2、1b-Ⅲ-2、Ab-Ⅲ-3、Ae-Ⅲ-1</span></div>
+  <div class="goal"><b>目標 2（第 3–4 節）</b>觀察山坡地裸露與魚塭景觀照片，關注農藥濫用、水土流失與過度捕撈等環境生活問題，理解經濟型態變遷與新科技（有機農業、科技養殖、智慧畜牧）會影響生活方式，運用三面分析 PMI 思考科技導入的利弊，透過句型鷹架與配對分享提出兼顧友善生產與永續發展的看法。<span class="code">社-E-A2、社-E-C1、2a-Ⅲ-1、Ce-Ⅲ-1、Ae-Ⅲ-1</span></div>
+
+  <h3>節次總覽</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>節次</th><th>主題</th><th>主要策略</th><th>學習單</th></tr>
+    <tr><td>第 1 節</td><td>餐桌上的產地線索</td><td>生活經驗連結、筆記方格表、海流圖判讀、離堂小卡</td><td>學習單一 正面</td></tr>
+    <tr><td>第 2 節</td><td>科技能讓任何地方都生產食物嗎？</td><td>表態光譜、專家拼圖（三案例）、關係箭頭、再表態</td><td>學習單一 背面</td></tr>
+    <tr><td>第 3 節</td><td>看見土地的困境與科技的救援</td><td>影像對比觀察、小組問題焦點討論、案例探索</td><td>學習單二 正面</td></tr>
+    <tr><td>第 4 節</td><td>科技萬靈丹？PMI 思辨與永續對話</td><td>PMI 三面分析、句型鷹架、配對分享</td><td>學習單二 背面</td></tr>
+  </table></div>
+</section>
+
+<section class="card" id="plan">
+  <div class="eyebrow">目標 1｜第 1 節</div>
+  <h2>第 1 節　餐桌上的產地線索</h2>
+  <p>本節重點：從課文找證據，比較作物生長條件；結合海流圖，理解海流、季節與漁業資源的關係。</p>
+  <p class="tag">準備：寶島餐桌圖卡（關廟鳳梨、丘陵茶、高山高麗菜、東部飛魚、烏魚子、牛奶等）、海流示意圖投影、學習單一</p>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>5′</td><td><b>引起動機｜我家餐桌的美味地圖</b><br>展示寶島餐桌圖卡。學生想一項最近吃過的食物，在學習單「暖身」寫下猜測的產地與理由，與同桌分享。教師記錄全班猜測，暫不公布答案。</td><td>你怎麼知道它可能來自那裡？<br>同一種食物，能在臺灣每個地方生產嗎？<br>為什麼冬至前後常吃到烏魚子？</td><td>口頭診斷先備概念<span class="code">社-E-A2</span></td></tr>
+    <tr><td>8′</td><td><b>示範從圖文找證據</b><br>閱讀 p.51，教師以「茶樹」示範，區分「課文明說」「根據資料推論」「還不知道」三種標記，全班共同完成筆記方格表第一列。</td><td>課文哪一句支持你的答案？<br>這項條件和作物生長有什麼關係？</td><td>問答觀察：是否依據課文而非印象<span class="code">1b-Ⅲ-2、Ab-Ⅲ-3</span></td></tr>
+    <tr><td>12′</td><td><b>四人合作｜筆記方格表</b><br>每人先閱讀記錄，再由小組整理稻米、甘蔗的生長條件；有餘力者挑戰可可（p.52–53）。輪流擔任找證據、提問、記錄、報告者，寫出一句「共同發現」。</td><td>哪些條件相同？哪些不同？<br>為什麼可可可以種在檳榔樹下？<br>自然條件適合，就一定能大量生產嗎？</td><td>學習單：比較至少三種作物、寫出有證據的關係句<span class="code">1b-Ⅲ-2、Ab-Ⅲ-3</span></td></tr>
+    <tr><td>10′</td><td><b>海流圖找魚蹤</b><br>閱讀 p.56–57，兩人一組沿箭頭指出海流方向，找出飛魚、烏魚出現的季節與海域，再回到課文確認。<br>教師用彩色磁鐵或動態箭頭區分夏季黑潮（暖流北上）與冬季中國沿岸流（冷流南下）。全班比較：農業與漁業受自然條件影響有何異同？</td><td>海流箭頭告訴我們什麼？<br>為什麼某些魚在特定季節較容易出現？<br>除了海流，課文還提到哪些環境條件？</td><td>指圖說明一項漁業資源與環境的關係<span class="code">1b-Ⅲ-2、Ab-Ⅲ-3</span></td></tr>
+    <tr><td>5′</td><td><b>離堂小卡</b><br>個別完成「＿＿適合在＿＿生長／出現，因為＿＿」，再寫一個還想知道的問題。教師挑選問題作為下一節導入。</td><td>今天哪一個原本的猜想需要修正？</td><td>個別書面評量<span class="code">1b-Ⅲ-2</span></td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <div class="eyebrow">目標 1｜第 2 節</div>
+  <h2>第 2 節　科技能讓任何地方都生產食物嗎？</h2>
+  <p>本節重點：比較自然條件與科技各自的作用，歸納生產活動如何改變空間利用，以及可能帶來的影響。</p>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>4′</td><td><b>回顧與表態</b><br>提出命題「有了科技，任何地方都能生產一樣的食物」。學生以同意／不確定／不同意表態（可站位或舉卡），在學習單寫下理由，保留課末修正機會。</td><td>科技能改變哪些條件？哪些仍有限制？</td><td>口頭診斷：是否視科技為萬能<span class="code">社-E-A2、1b-Ⅲ-2</span></td></tr>
+    <tr><td>8′</td><td><b>共同閱讀生產今昔</b><br>閱讀 p.54–55，對照家庭飼養與集中式牧場，辨識智慧監控、飼料車等設備。教師示範用「技術改變 → 生產影響 → 空間利用 → 可能問題」整理。</td><td>智慧監控改變了什麼？<br>大量飼養需要哪些空間與設備？<br>效率提高後，還有哪些問題要處理？</td><td>圖文問答：說明技術對生產及環境的一項影響<span class="code">Ae-Ⅲ-1、Ab-Ⅲ-3</span></td></tr>
+    <tr><td>13′</td><td><b>專家拼圖｜小組案例推理</b><br>各組分配一案例：①混農林業與可可間作 p.52–53　②智慧畜牧 p.54–55　③養殖漁業 p.57。<br>用學習單「案例比較表」整理自然條件、技術或經營調整、空間利用及影響，並畫出至少兩條有文字說明的關係箭頭。</td><td>哪些做法利用了原有自然條件？<br>改變後，土地、水域或設施怎麼使用？<br>有哪些好處？哪些限制或疑問？</td><td>合作成果與追問：以課文證據連結條件、技術、生產與空間<span class="code">1b-Ⅲ-2、Ab-Ⅲ-3、Ae-Ⅲ-1</span></td></tr>
+    <tr><td>10′</td><td><b>跨組分享與共同歸納</b><br>與不同案例的小組交換說明（分一得一），聽者提出一個「為什麼」或「如果……會怎樣」的問題，記錄在表格中。回組修正後共同完成歸納句。</td><td>三個案例有哪些共同關係？<br>若生產規模擴大，可能改變哪些生活空間？</td><td>分享、提問與修正紀錄<span class="code">社-E-A2、1b-Ⅲ-2</span></td></tr>
+    <tr><td>5′</td><td><b>個別統整與再表態</b><br>重新回應開場命題：「我現在認為＿＿，因為課文中的＿＿顯示＿＿；仍須注意＿＿。」</td><td>你的想法改變了嗎？什麼證據讓你改變？</td><td>個別總結評量<span class="code">社-E-A2、1b-Ⅲ-2、Ab-Ⅲ-3、Ae-Ⅲ-1</span></td></tr>
+  </table></div>
+  <p class="note">替代方案（如集版）：可改為四專家拼圖——A 農產與地形、B 漁業與海流、C 畜牧與經營轉型、D 科技改良與經濟轉型，最後全組畫出「自然條件 → 科技改良 → 經濟活動與空間多元利用」關係鏈。</p>
+</section>
+
+<section class="card">
+  <div class="eyebrow">目標 2｜第 3 節</div>
+  <h2>第 3 節　看見土地的困境與科技的救援</h2>
+  <p class="tag">準備：對比照片「翠綠山林 vs. 裸露沖刷的山坡地」「多樣海洋生態 vs. 高密度魚塭／烏魚捕獲量長條圖」、學習單二</p>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>5′</td><td><b>引起動機｜看見土地與海洋的眼淚</b><br>投影兩組景觀對比照片，學生在學習單「照片偵探」記下看到的變化與可能原因。</td><td>這兩組照片中，土地與海洋發生了什麼變化？<br>如果環境持續惡化，對我們的餐桌與生活有什麼影響？</td><td>口語：指認環境問題並表達關注<span class="code">2a-Ⅲ-1</span></td></tr>
+    <tr><td>15′</td><td><b>環境衝擊與生產危機｜問題焦點討論</b><br>小組討論課本提到的三大產業困境，完成學習單「困境整理表」前兩欄：<br>‧農業：過度噴灑農藥汙染土壤與水質；陡坡開發導致水土流失。<br>‧畜牧業：高密度飼養易產生廢棄物汙染與傳染病風險（口蹄疫、非洲豬瘟）。<br>‧漁業：近海過度捕撈，資源減少、捕獲量不穩定。</td><td>這個問題和你的生活有什麼關係？<br>誰會受到影響？</td><td>連結生活經驗，表達對環境議題的關注<span class="code">2a-Ⅲ-1</span></td></tr>
+    <tr><td>15′</td><td><b>科技解方與生產轉型｜案例探索</b><br>教師介紹轉型案例，學生完成困境整理表第三欄：<br>‧有機與休閒農業：魚茭共生（不用農藥化肥）、混農林業。<br>‧智慧畜牧：乳牛配戴健康監控裝置、無人車餵食、自動刷背機。<br>‧科技養殖：室內智慧養殖池、海面箱網養殖、智慧水質檢測。</td><td>這些改變對生產者的生活有什麼影響？對消費者呢？</td><td>說明經濟型態與科技如何影響生活方式<span class="code">Ce-Ⅲ-1、Ae-Ⅲ-1</span></td></tr>
+    <tr><td>5′</td><td><b>總結與預告</b><br>「科技看似解決了許多生產問題，但它真的完美無缺嗎？」預告下節以 PMI 分析，請學生先想一想好處與隱憂。</td><td>引進新科技可能有哪些隱憂？</td><td>—</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <div class="eyebrow">目標 2｜第 4 節</div>
+  <h2>第 4 節　科技萬靈丹？PMI 思辨與永續對話</h2>
+  <div class="tbl-wrap"><table class="plan">
+    <tr><th>時間</th><th>學習活動與操作</th><th>引導問題</th><th>評量與領綱</th></tr>
+    <tr><td>5′</td><td><b>複習與任務說明</b><br>快速卡問答複習有機農業、智慧畜牧、科技養殖的具體做法；揭示本節任務：PMI 分析 → 句型鷹架 → 配對分享。</td><td>智慧畜牧用了哪些設備？</td><td>快問快答</td></tr>
+    <tr><td>15′</td><td><b>PMI 三面分析</b><br>學生選一項科技或友善生產方式，個人填寫 PMI 分析表，教師巡視。特別引導 I（有趣／值得探究），鼓勵跨領域或未來導向的提問。</td><td>P：對環境與產量有哪些正面效益？<br>M：可能遇到哪些限制、困難或負面影響？<br>I：有哪些值得進一步探究的新問題？</td><td>實作：PMI 分析表<span class="code">Ce-Ⅲ-1、Ae-Ⅲ-1</span></td></tr>
+    <tr><td>15′</td><td><b>句型鷹架與配對分享</b><br>① 依 PMI 表整理句型草稿（2′）<br>② 兩兩輪流發表，聽者記錄對方的優點，並提出一個建議或疑問（8′）<br>③ 邀請 2–3 組上臺分享，教師給予具體回饋（5′）</td><td>你同意夥伴的做法嗎？為什麼？</td><td>同儕與口語評量<span class="code">社-E-A2、社-E-C1</span></td></tr>
+    <tr><td>5′</td><td><b>綜合梳理</b><br>教師總結：科技是永續經營的工具之一，真正的永續需要生產者、消費者與政府共同努力。學生完成自評後繳交學習單。</td><td>身為消費者，我可以做什麼？</td><td>繳交學習單二</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>評量判準</h2>
+  <div class="tbl-wrap"><table>
+    <tr><th>評量面向</th><th>達成表現</th><th>證據來源</th><th>領綱</th></tr>
+    <tr><td>理解自然條件</td><td>能比較至少三種作物的條件，並結合海流圖說明一項漁業資源與環境的關係。</td><td>學習單一 任務一、二、離堂小卡</td><td>1b-Ⅲ-2、Ab-Ⅲ-3</td></tr>
+    <tr><td>理解科技影響</td><td>能以一個具體案例，解釋技術對生產、空間或環境的影響，而非只說「更方便」。</td><td>學習單一 任務三</td><td>Ae-Ⅲ-1</td></tr>
+    <tr><td>歸納關聯</td><td>能以「因為……所以……」或關係箭頭，連結自然條件、技術、生產活動與空間利用。</td><td>學習單一 關係箭頭、再表態</td><td>1b-Ⅲ-2、社-E-A2</td></tr>
+    <tr><td>關注環境問題</td><td>能指認山坡地裸露、過度捕撈等問題，並說出對生活的影響。</td><td>學習單二 任務一、二</td><td>2a-Ⅲ-1</td></tr>
+    <tr><td>多面思辨</td><td>能從 P、M、I 三個角度合理分析科技導入的利弊。</td><td>學習單二 PMI 表</td><td>Ce-Ⅲ-1、Ae-Ⅲ-1</td></tr>
+    <tr><td>永續主張與表達</td><td>能善用句型完整表達，傾聽同儕並提出兼顧友善生產與永續發展的看法。</td><td>句型鷹架、配對分享紀錄</td><td>社-E-A2、社-E-C1</td></tr>
+  </table></div>
+  <p class="note">以學習單、小組說明及個別作答綜合判斷，個別理解優先於小組作品的完整度。</p>
+</section>
+
+<section class="card">
+  <h2>教學提醒</h2>
+  <ul>
+    <li><b>避免環境決定論：</b>自然條件會影響生產，但產業也受技術、成本、市場與經營方式影響，不宜教成「某地只能生產某物」。</li>
+    <li><b>避免科技萬能論：</b>科技不是唯一解方，有機農業、休閒農業等「思維與習慣的改變」同樣是永續的核心。</li>
+    <li><b>區分技術與經營方式：</b>智慧監控屬技術；集中經營、混農林業、間作屬生產配置與經營調整，不必都稱為新科技。</li>
+    <li><b>海流圖須圖文合讀：</b>先看季節、方向、海域，再讀魚類說明；海流不是魚類分布的唯一因素。</li>
+    <li><b>空間利用說具體：</b>以田地、坡地、牧場、畜舍、魚塭等實例說明；圖文未呈現的標示為「待查問題」。</li>
+    <li><b>合作前先個別思考：</b>提供「課文指出……，所以我們推論……」句型，每人至少貢獻一項證據或問題。</li>
+    <li><b>PMI 的 I 最難：</b>可先示範「如果未來全面由 AI 養魚，漁夫會轉行做什麼？」等例子；表達較弱的學生提供填空式句型卡，並與表達較佳的同儕配對。</li>
+    <li><b>連結生活：</b>隨時扣回學校午餐菜色、家中食材包裝的產地標示。</li>
+  </ul>
+  <h3>教學資源</h3>
+  <ul>
+    <li><a href="https://fae.moa.gov.tw/" target="_blank" rel="noopener">農業部食農教育資訊整合平臺</a>：農產地圖、農漁畜產品圖文與教材</li>
+    <li><a href="https://kid.afa.gov.tw/" target="_blank" rel="noopener">農糧署兒童版</a>：兒童取向的農糧資訊</li>
+    <li><a href="https://www.fa.gov.tw/view.php?id=460&theme=web_structure" target="_blank" rel="noopener">漁業署食魚教育學習單</a>：餐桌海鮮、漁業生產與永續利用</li>
+    <li><a href="https://tmec.ntou.edu.tw/p/404-1016-106019.php?Lang=zh-tw" target="_blank" rel="noopener">臺灣海洋教育中心 食魚教育學生海洋讀本</a></li>
+    <li><a href="https://learning.ardswc.gov.tw/" target="_blank" rel="noopener">水保酷學堂</a>：坡地利用、水土流失動畫與教材</li>
+    <li><a href="https://scitechvista.nat.gov.tw/Article/c000003/detail?ID=362eefe4-92e6-4130-bac0-c063656de00d" target="_blank" rel="noopener">科技大觀園〈畜牧業大突破〉</a>：可節選改寫為 PMI 閱讀資料</li>
+    <li><a href="https://www.tea.ntpc.gov.tw/" target="_blank" rel="noopener">新北市坪林茶業博物館</a>、<a href="https://www.taisugar.com.tw/Sugar/CP2.aspx?n=10780" target="_blank" rel="noopener">台糖虎尾糖廠</a>：茶、糖產業補充</li>
+  </ul>
+</section>
+
+<!-- ===================== 學習單一 正面 ===================== -->
+<div class="sheet" id="ws1">
+  <div class="head">
+    <div><div class="sub">社會 3-1 豐饒的土地｜學習單一（第 1 節）</div><h2>餐桌上的產地線索</h2></div>
+    <div class="who">五年＿＿班　座號＿＿　姓名＿＿＿＿＿＿　第＿＿組</div>
+  </div>
+
+  <h3>暖身｜我家餐桌的美味地圖</h3>
+  <p>我最近吃過 <span class="fill"></span>，我猜它來自 <span class="fill"></span>，因為 <span class="fill l"></span>。</p>
+
+  <h3>任務一｜筆記方格表：作物的生長條件（課本 p.51–53）</h3>
+  <p class="tip">標記：<b>明</b>＝課文明說　<b>推</b>＝根據資料推論　<b>？</b>＝還不知道（請圈選）</p>
+  <table>
+    <tr><th style="width:15%">作物</th><th style="width:22%">主要產地／地形</th><th style="width:26%">氣候、水、土壤等條件</th><th style="width:22%">課文證據（頁碼／關鍵句）</th><th style="width:15%">標記</th></tr>
+    <tr><td>茶樹<br><span class="tip">（全班示範）</span></td><td class="h16"></td><td></td><td></td><td>明　推　？</td></tr>
+    <tr><td>稻米</td><td class="h16"></td><td></td><td></td><td>明　推　？</td></tr>
+    <tr><td>甘蔗</td><td class="h16"></td><td></td><td></td><td>明　推　？</td></tr>
+    <tr><td>可可<br><span class="tip">★挑戰</span></td><td class="h16"></td><td></td><td></td><td>明　推　？</td></tr>
+  </table>
+  <p><b>我們的共同發現：</b>＿＿＿＿＿＿和＿＿＿＿＿＿的生長條件不同，因為 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿。</p>
+
+  <h3>任務二｜海流圖找魚蹤（課本 p.56–57）</h3>
+  <table>
+    <tr><th style="width:14%">魚種</th><th style="width:16%">出現季節</th><th style="width:22%">主要海域</th><th style="width:22%">相關海流（暖流／冷流）</th><th>海流和魚出現的關係</th></tr>
+    <tr><td>飛魚</td><td class="h16"></td><td></td><td></td><td></td></tr>
+    <tr><td>烏魚</td><td class="h16"></td><td></td><td></td><td></td></tr>
+  </table>
+  <p><b>比一比：</b>農業和漁業都受到自然條件影響，農業主要看 ＿＿＿＿＿＿＿＿，漁業還會受到 ＿＿＿＿＿＿＿＿ 影響。</p>
+
+  <div class="ticket">
+    <b>✂ 離堂小卡</b>
+    <p><span class="fill"></span> 適合在 <span class="fill"></span> 生長／出現，因為 <span class="fill l"></span>。</p>
+    <p>今天我修正了原本的想法：<span class="fill l"></span><span class="fill"></span></p>
+    <p>我還想知道：<span class="fill l"></span><span class="fill l"></span></p>
+  </div>
+  <span class="page-tag">學習單一・正面</span>
+</div>
+
+<!-- ===================== 學習單一 背面 ===================== -->
+<div class="sheet">
+  <div class="head">
+    <div><div class="sub">社會 3-1 豐饒的土地｜學習單一（第 2 節）</div><h2>科技能讓任何地方都生產食物嗎？</h2></div>
+    <div class="who">座號＿＿　姓名＿＿＿＿＿＿</div>
+  </div>
+
+  <h3>開場表態</h3>
+  <p>「有了科技，任何地方都能生產一樣的食物。」　□ 同意　□ 不確定　□ 不同意</p>
+  <p>我的理由：<span class="fill l"></span><span class="fill l"></span></p>
+
+  <h3>任務三｜案例比較表</h3>
+  <p class="chk">我們這組負責：□ ①混農林業與可可間作 p.52–53　□ ②智慧畜牧 p.54–55　□ ③養殖漁業 p.57</p>
+  <table>
+    <tr><th style="width:13%">案例</th><th>自然條件或<br>原有生產限制</th><th>技術或經營<br>方式的調整</th><th>土地、水域或<br>設施如何使用</th><th>對生產、環境<br>與生活的影響</th></tr>
+    <tr><td>我們組<br>案例 ＿</td><td class="h20"></td><td></td><td></td><td></td></tr>
+    <tr><td>聽到的<br>案例 ＿</td><td class="h20"></td><td></td><td></td><td></td></tr>
+    <tr><td>聽到的<br>案例 ＿</td><td class="h20"></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <p><b>畫出關係箭頭</b>（以我們組的案例填寫，箭頭旁可寫「因為／所以」）</p>
+  <div class="chain">
+    <div class="box">自然條件</div><div class="arrow">→</div>
+    <div class="box">技術／經營調整</div><div class="arrow">→</div>
+    <div class="box">空間怎麼使用</div><div class="arrow">→</div>
+    <div class="box">帶來的影響</div>
+  </div>
+  <p class="tip">跨組分享時，我問了一個問題：□ 為什麼……？ □ 如果……會怎樣？ <span class="fill l"></span></p>
+
+  <h3>全組共同歸納</h3>
+  <p>自然條件影響 <span class="fill l"></span>；科技可以 <span class="fill l"></span>，</p>
+  <p>但仍須考量 <span class="fill l"></span>；生產活動也會改變 <span class="fill l"></span>。</p>
+
+  <h3>再表態｜我的想法改變了嗎？</h3>
+  <p>我現在認為 <span class="fill l"></span>，因為課文中的 <span class="fill"></span></p>
+  <p>顯示 <span class="fill l"></span>；仍須注意 <span class="fill l"></span>。</p>
+
+  <h3>自我檢核</h3>
+  <table class="self">
+    <tr><th>我能……</th><th style="width:16%">做到了</th><th style="width:16%">還要加油</th></tr>
+    <tr><td>根據課文證據比較至少三種作物的生長條件</td><td>□</td><td>□</td></tr>
+    <tr><td>看懂海流圖，說明一種魚和海流、季節的關係</td><td>□</td><td>□</td></tr>
+    <tr><td>用一個案例說明科技如何改變生產與空間利用</td><td>□</td><td>□</td></tr>
+  </table>
+  <span class="page-tag">學習單一・背面</span>
+</div>
+
+<!-- ===================== 學習單二 正面 ===================== -->
+<div class="sheet" id="ws2">
+  <div class="head">
+    <div><div class="sub">社會 3-1 豐饒的土地｜學習單二（第 3 節）</div><h2>看見土地的困境與科技的救援</h2></div>
+    <div class="who">五年＿＿班　座號＿＿　姓名＿＿＿＿＿＿　第＿＿組</div>
+  </div>
+
+  <h3>任務一｜照片偵探：土地與海洋發生了什麼事？</h3>
+  <div class="cols2">
+    <div class="box">
+      <b>第一組照片：翠綠山林 ↔ 裸露的山坡地</b>
+      <p>我看到的變化：</p><div class="ln"></div>
+      <p>可能的原因：</p><div class="ln"></div>
+    </div>
+    <div class="box">
+      <b>第二組照片：多樣海洋生態 ↔ 高密度魚塭</b>
+      <p>我看到的變化：</p><div class="ln"></div>
+      <p>可能的原因：</p><div class="ln"></div>
+    </div>
+  </div>
+  <p>如果環境持續惡化，我們的餐桌和生活可能會 <span class="fill l"></span><span class="fill l"></span>。</p>
+
+  <h3>任務二｜產業困境與轉型整理表</h3>
+  <table>
+    <tr><th style="width:12%">產業</th><th>遇到什麼問題？</th><th>對環境或生活的影響</th><th>科技或友善生產的做法</th></tr>
+    <tr><td>農業</td><td class="h24"></td><td></td><td></td></tr>
+    <tr><td>畜牧業</td><td class="h24"></td><td></td><td></td></tr>
+    <tr><td>漁業</td><td class="h24"></td><td></td><td></td></tr>
+  </table>
+  <p class="tip">提示詞庫：農藥、水土流失、廢棄物汙染、傳染病、過度捕撈、捕獲量不穩定／魚茭共生、混農林業、健康監控裝置、無人車餵食、自動刷背機、箱網養殖、室內智慧養殖池、智慧水質檢測</p>
+
+  <h3>想一想：轉型改變了誰的生活？</h3>
+  <table>
+    <tr><th style="width:50%">生產者（農民、牧場主、漁民）</th><th>消費者（我們家）</th></tr>
+    <tr><td class="h20"></td><td></td></tr>
+  </table>
+
+  <div class="ticket">
+    <b>下節預告｜先想一想</b>
+    <p>引進新科技的一個好處：<span class="fill l"></span>　一個隱憂：<span class="fill l"></span></p>
+  </div>
+  <span class="page-tag">學習單二・正面</span>
+</div>
+
+<!-- ===================== 學習單二 背面 ===================== -->
+<div class="sheet">
+  <div class="head">
+    <div><div class="sub">社會 3-1 豐饒的土地｜學習單二（第 4 節）</div><h2>科技萬靈丹？PMI 思辨與永續對話</h2></div>
+    <div class="who">座號＿＿　姓名＿＿＿＿＿＿</div>
+  </div>
+
+  <h3>任務三｜PMI 三面分析</h3>
+  <p class="chk">我要分析：□ 有機與休閒農業　□ 智慧畜牧　□ 科技養殖　□ 其他：＿＿＿＿＿＿</p>
+  <table>
+    <tr><th style="width:18%">思考面向</th><th style="width:30%">引導提問</th><th>我的想法</th></tr>
+    <tr><td><b>P</b> 優點<br>Plus</td><td class="tip">對環境、產量或生產者帶來哪些正面效益？</td><td class="h20"></td></tr>
+    <tr><td><b>M</b> 隱憂<br>Minus</td><td class="tip">可能遇到哪些限制、困難或負面影響？（成本？誰會操作？買得起嗎？）</td><td class="h20"></td></tr>
+    <tr><td><b>I</b> 有趣<br>Interesting</td><td class="tip">有哪些值得進一步探究、有創意的新問題？（未來？工作？垃圾？）</td><td class="h20"></td></tr>
+  </table>
+
+  <h3>任務四｜句型鷹架：我的永續主張</h3>
+  <div class="box">
+    <p>【現況關注】我注意到目前產業面臨了 <span class="fill"></span> 的問題，對 <span class="fill"></span> 造成影響。</p>
+    <p>【PMI 利弊】雖然導入 <span class="fill"></span> 有 <span class="fill l"></span> 的好處，</p>
+    <p>　　　　　　但我也擔心 <span class="fill l"></span><span class="fill"></span>。</p>
+    <p>【永續主張】為了兼顧「友善生產」與「永續發展」，我認為最重要的做法是</p>
+    <div class="ln"></div><div class="ln"></div>
+  </div>
+
+  <h3>配對分享紀錄</h3>
+  <table>
+    <tr><th style="width:22%">夥伴姓名</th><th>他／她的想法中，我覺得很棒的地方</th><th>我給的建議或疑問</th></tr>
+    <tr><td class="h20"></td><td></td><td></td></tr>
+  </table>
+
+  <p><b>生活行動：</b>身為消費者，我可以 <span class="fill l"></span><span class="fill l"></span></p>
+
+  <h3>自我檢核</h3>
+  <table class="self">
+    <tr><th>我能……</th><th style="width:16%">做到了</th><th style="width:16%">還要加油</th></tr>
+    <tr><td>指出農業、畜牧業、漁業各一個環境問題及影響</td><td>□</td><td>□</td></tr>
+    <tr><td>從 P、M、I 三個角度分析一項科技</td><td>□</td><td>□</td></tr>
+    <tr><td>用完整句子說出我的永續主張，並回應夥伴</td><td>□</td><td>□</td></tr>
+  </table>
+  <span class="page-tag">學習單二・背面</span>
+</div>
+
+<!-- ===================== 教師參考答案 ===================== -->
+<section class="card" id="key">
+  <h2>教師參考答案（不需列印給學生）</h2>
+  <p class="note">以下為引導方向，請依課本實際內容調整；學生答案合理且有證據即可給分。</p>
+  <h3>學習單一 任務一</h3>
+  <div class="tbl-wrap"><table class="key">
+    <tr><th>作物</th><th>產地／地形</th><th>條件</th></tr>
+    <tr><td>茶樹</td><td>丘陵、山坡地</td><td>雨量多、排水良好、雲霧多</td></tr>
+    <tr><td>稻米</td><td>平原</td><td>地勢平坦、水源充足、氣候溫暖</td></tr>
+    <tr><td>甘蔗</td><td>南部平原</td><td>日照充足、氣溫高，乾濕季分明有利糖分累積</td></tr>
+    <tr><td>可可</td><td>屏東等南部地區</td><td>高溫多雨；需要遮蔭，可種在檳榔樹下（混農林業）</td></tr>
+  </table></div>
+  <h3>學習單一 任務二</h3>
+  <div class="tbl-wrap"><table class="key">
+    <tr><th>魚種</th><th>季節</th><th>海域</th><th>海流</th></tr>
+    <tr><td>飛魚</td><td>春夏</td><td>東部海域、蘭嶼</td><td>黑潮（暖流，北上）</td></tr>
+    <tr><td>烏魚</td><td>冬季（冬至前後）</td><td>西南部沿海</td><td>中國沿岸流（冷流，南下）</td></tr>
+  </table></div>
+  <h3>學習單一 歸納句示例</h3>
+  <p>自然條件影響<b>作物種類與魚群出現的季節、地點</b>；科技可以<b>提高效率、減少部分自然限制</b>，但仍須考量<b>成本、環境負擔與動物健康</b>；生產活動也會改變<b>土地、水域與設施的使用方式</b>。</p>
+  <h3>學習單二 PMI 示例</h3>
+  <ul>
+    <li><b>P：</b>降低農藥汙染、提高生產效率、自動監控禽畜健康、減少人力負擔。</li>
+    <li><b>M：</b>設備昂貴、年長農民不易操作、依賴電力與網路、有機產品價格較高。</li>
+    <li><b>I：</b>「如果未來全面由 AI 養魚，漁夫會轉行做什麼？」「科技設備壞掉會不會變成電子垃圾？」</li>
+  </ul>
+</section>
+
+</main>
+<script>
+document.getElementById('printSheets').addEventListener('click',function(){document.body.classList.add('print-sheets');window.print();});
+document.getElementById('printAll').addEventListener('click',function(){document.body.classList.remove('print-sheets');window.print();});
+window.addEventListener('afterprint',function(){document.body.classList.remove('print-sheets');});
+</script>
+</body></html>
